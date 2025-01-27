@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>SiteBase2 | Lessons</title>
+  <meta name="description" content="Documentation for SiteBase: a minimalistic HTML + CSS + JS base front-end framework for simple web site projects.">
+
+  <!-- VIEWPORT FOR MOBILE -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- MAIN CSS FILE -->
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header class="site-header toggle-nav animated">
+    <div class="site-id">
+      <h1><a href="../index.html">SiteBase2</a> / Lessons</h1>
+    </div>
+    <nav class="site-navigation">
+      <button class="menu-button navicon">Menu</button>
+      <ul class="nav">
+        <li class="hidden"><a href="../index.html">Home</a></li>
+        <li><a href="../dist/index.html">Demo</a></li>
+        <li class="selected"><a href="lessons.html">Lessons</a></li>
+        <li><a href="documentation.html">Docs</a></li>
+        <li><a href="examples.html">Examples</a></li>
+        <li><a class="button" href="variations/sitebase2-static.zip">Download</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="site-main">
+    <section class="hero text-centered">
+      <h2>SiteBase2 Lessons</h2>
+      <p>
+        This page contains a step-by-step guide to manually recode SiteBase2 from scratch, by hand, as a way to learn the basics of front-end development.
+      </p>
+    </section>
+
+    <section id="sitebase1">
+      <div class="container">
+        <h3>SiteBase2 Lessons</h3>
+        <p>
+          SiteBase2 is a static HTML + CSS + JS front-end base
+          (starter/boilerplate). The lessons below are for those interested in
+          coding a basic front-end framework for a simple static site from
+          scratch by hand, line-by-line. No prior web design or coding
+          experience required. Designed for first-time front-end coders, SiteBase2 uses no pre-processing (e.g. SASS), no command line
+          interface (CLI), and no special software. All you need is a text
+          editor and a browser.
+        </p>
+        <!-- <a class="button" href="https://youtu.be/qf99ZceaTYY">Watch an Intro Video</a> -->
+
+        <div id="baseblank" class="accordian">
+          <h4>
+            Step 1 <span class="light nomobile">Static Site Boilerplate</span>
+            <div class="arrow"></div>
+          </h4>
+          <div class="collapsible">
+            <div class="row">
+              <div class="one-half column">
+                <h5>Description:</h5>
+                <p>
+                  Set up your local development environment by creating a basic folder structure
+                  and file system containing only the core essential boilerplate code required for a bare-bones, no content starter
+                  setup suitable for any simple static site project.
+                </p>
+                <ol>
+                  <li>Create a "base-boilerplate" root folder</li>
+                  <li>Create "css" and "js" sub folders</li>
+                  <li>
+                    Add an index.html file
+                    <ul>
+                      <li>Add boilerplate markup</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Link to a style.css file
+                    <ul>
+                      <li>Add sample css table of contents</li>
+                    </ul>
+                  </li>
+                  <li>Link to a script.js file</li>
+                </ol>
+                <a class="button" href="lessons/base-boilerplate.zip">Download Zip</a>
+                <a class="button alt" href="https://github.com/kccnma/sitebase2/tree/master/docs/lessons/base-boilerplate">View
+                  Source</a>
+              </div>
+              <div class="one-half column">
+                <h5>Screenshot:</h5>
+                <a href="lessons/base-boilerplate/index.html">
+                  <img src="img/base-boilerplatestarter.jpg" alt="Base Blank Starter" width="1280" height="720">
+                </a>
+                <p>
+                  <a class="button" href="lessons/base-boilerplate/index.html">View Demo</a>
+                  <!-- <a class="button alt" href="https://youtu.be/SN-4BaqQQgs">View Video Lesson</a> -->
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="basecontent" class="accordian">
+          <h4>
+            Step 2 <span class="light nomobile">Base Content</span>
+            <div class="arrow"></div>
+          </h4>
+          <div class="collapsible">
+            <div class="row">
+              <div class="one-half column">
+                <h5>Description:</h5>
+                <p>
+                  If "Content is King" then Typography is the Queen, so a good way to start <strike>designing</strike>
+                  coding content is to set your type. Define your base-level typographic style settings and associated
+                  rules (e.g. your default body font size and leading, heading sizes using a typographic scale, etc).
+                  Next, define base-level styles for commonly used content, such as images (e.g. responsive
+                  images), along with core essential UI components (e.g. buttons) .
+                </p>
+                <ol>
+                  <li>
+                    Duplicate your "base-boilerplate" folder and rename it to
+                    "base-content"
+                  </li>
+                  <li>
+                    Delete your "js" folder and link to it (we will add it
+                    back later)
+                  </li>
+                  <li>
+                    Add base content markup to your index.html file and base
+                    content styles to your style.css file:
+                    <ul>
+                      <li>
+                        Base Typography
+                        <ul>
+                          <li>
+                            Body, Headings, Paragraphs, Links, <del>Lists</del>,
+                            Blockquotes, &amp; Helpers
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        Base Media
+                        <ul>
+                          <li>Images</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Base Components
+                        <ul>
+                          <li>Buttons</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+                <a class="button" href="lessons/base-content.zip">Download Zip</a>
+                <a class="button alt" href="https://github.com/kccnma/sitebase2/tree/master/docs/lessons/base-content">View
+                  Source</a>
+
+              </div>
+              <div class="one-half column">
+                <h5>Screenshot:</h5>
+                <a href="lessons/base-content/index.html">
+                  <img src="img/base-content.jpg" alt="Base Content" width="1280" height="720">
+                </a>
+                <p>
+                  <a class="button" href="lessons/base-content/index.html">View Demo</a>
+                  <!-- <a class="button alt" href="https://youtu.be/EaWGweTzIZk">View Video Lesson</a> -->
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="baselayout" class="accordian">
+          <h4>
+            Step 3 <span class="light nomobile">Base Layout</span>
+            <div class="arrow"></div>
+          </h4>
+          <div class="collapsible">
+            <div class="row">
+              <div class="one-half column">
+                <h5>Description:</h5>
+                <p>
+                  Make your base responsive by setting up media queries
+                  targeting different screen sizes and use a simple grid for
+                  the layout of your content.
+                </p>
+                <ol>
+                  <li>
+                    Duplicate your "base-content" folder and rename it to
+                    "base-layout"
+                  </li>
+                  <li>
+                    Remove all content from index.html and add "demo" grid
+                    markup
+                  </li>
+                  <li>
+                    Add a simple reset, media queries, and a simple grid to your style.css file
+                    <ul>
+                      <li>Simple Reset (set all elements to box-sizing: border-box and remove your default body margins)
+                      </li>
+                      <li>
+                        Media Queries (with body font-size settings and a
+                        "container" with a fixed width for large screens and
+                        fluid for small screens)
+                      </li>
+                      <li>
+                        Custom Grid (multiple columns for large screens,
+                        stacked columns for small screens)
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+                <a class="button" href="lessons/base-layout.zip">Download Zip</a>
+                <a class="button alt" href="https://github.com/kccnma/sitebase2/tree/master/docs/lessons/base-layout">View
+                  Source</a>
+              </div>
+              <div class="one-half column">
+                <h5>Screenshot:</h5>
+                <a href="lessons/base-layout/index.html">
+                  <img src="img/base-layout.jpg" alt="Base Layout" width="1280" height="720">
+                </a>
+                <p>
+                  <a class="button" href="lessons/base-layout/index.html">View Demo</a>
+                  <!-- <a class="button alt" href="https://youtu.be/_kGPn9-Y4HE">View Video Lesson</a> -->
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="basesite" class="accordian">
+          <h4>
+            Step 4
+            <span class="light nomobile">Base Site Structure (Home Page)</span>
+            <div class="arrow"></div>
+          </h4>
+          <div class="collapsible">
+            <div class="row">
+              <div class="one-half column">
+                <h5>Description:</h5>
+                <p>
+                  Use semantic HTML5 elements to set up a common site
+                  structure including a site header, footer, navigation, and
+                  main content area.
+                </p>
+                <ol>
+                  <li>
+                    Duplicate your "base-layout" folder and rename it to
+                    "base-site"
+                  </li>
+                  <li>
+                    Remove all content from index.html and add base structural
+                    site markup:
+                    <ul>
+                      <li>
+                        Header, Footer, Navigation, Main Content Areas (e.g.
+                        Hero Section, 3-Column placeholder content)
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Add base structural site styling your style.css file
+                    <ul>
+                      <li>
+                        Base Site Structure
+                        <ul>
+                          <li>Header, Logo, Footer, Sections</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Base Navigation
+                        <ul>
+                          <li>Header Nav, Footer Nav</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+                <a class="button" href="lessons/base-site.zip">Download Zip</a>
+                <a class="button alt" href="https://github.com/kccnma/sitebase2/tree/master/docs/lessons/base-site">View
+                  Source</a>
+              </div>
+              <div class="one-half column">
+                <h5>Screenshot:</h5>
+                <a href="lessons/base-site/index.html">
+                  <img src="img/base-site.jpg" alt="Base Site Screenshot" width="1280" height="720">
+                </a>
+                <p>
+                  <a class="button" href="lessons/base-site/index.html">View Demo</a>
+                  <!-- <a class="button alt" href="https://youtu.be/4VSXy4ey8Pg">View Video Lesson</a> -->
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="basetogglenav" class="accordian">
+          <h4>
+            Step 5
+            <span class="light nomobile">Mobile Menu (Toggle Nav)</span>
+            <div class="arrow"></div>
+          </h4>
+          <div class="collapsible">
+            <div class="row">
+              <div class="one-half column">
+                <h5>Description:</h5>
+                <p>
+                  Use Javascript to make a a simple toggle-style main
+                  navigation for small screen sizes.
+                </p>
+                <ol>
+                  <li>Add back a "js" folder and script.js file</li>
+                  <li>Add a "menu" element to your main navigation.</li>
+                  <li>
+                    Add a custom JavaScript function that will change the value of a custom data-attribute from "open"
+                    to "closed"
+                    to open and close the main navigation on smaller screens.
+                  </li>
+                  <li>Style the menu to look like a three-bar navicon.</li>
+                </ol>
+                <a class="button" href="lessons/base-site-togglenav.zip">Download Zip</a>
+                <a class="button alt" href="https://github.com/kccnma/sitebase2/tree/master/docs/lessons/base-site-togglenav">View
+                  Source</a>
+
+              </div>
+              <div class="one-half column">
+                <h5>Screenshot:</h5>
+                <a href="lessons/base-site-togglenav/index.html">
+                  <img src="img/base-site-togglenav.jpg" alt="Base Site Screenshot" width="1280" height="720">
+                </a>
+                <p>
+                  <a class="button" href="lessons/base-site-togglenav/index.html">View Demo</a>
+                  <!-- <a class="button alt" href="https://youtu.be/6ycUN5QpbSo">View Video Lesson</a> -->
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="basesubpages" class="accordian">
+          <h4>
+            Step 6 <span class="light nomobile">Sub Page(s)</span>
+            <div class="arrow"></div>
+          </h4>
+          <div class="collapsible">
+            <div class="row">
+              <div class="one-half column">
+                <h5>Description:</h5>
+                <p>
+                  Create sub pages that are well suited for specific content,
+                  such as an about or post page with long form content (e.g.
+                  articles for reading) or a traditional two-column sub page
+                  with a main content area and sidebar with a sub nav. Other
+                  sub page examples include a contact page with a simple
+                  contact form, a post/product/image listing page, and a
+                  product/feature detail page.
+                </p>
+                <ol>
+                  <li>
+                    Update the index.html page site navigation to link to the
+                    following example sub pages;
+                    <ul>
+                      <li>
+                        about.html, contact.html (optional: products.html,
+                        product-detail.html)
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Copy/paste the index.html page and to create each of the
+                    above example sub pages
+                  </li>
+                  <li>
+                    Potential new features/components to consider when adding
+                    sub pages and sub page content:
+                    <ul>
+                      <li>
+                        Articles, forms, inline page anchors, responsive grids
+                        for lists and thumbnail images, and popular design
+                        patterns and UI components such as modal tabs,
+                        overlays, carousels, and accordians/collapsible
+                        panels.
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+                <a class="button" href="lessons/base-site-subpage.zip">Download Zip</a>
+                <a class="button alt" href="https://github.com/kccnma/sitebase2/tree/master/docs/lessons/base-site-subpage">View
+                  Source</a>
+              </div>
+              <div class="one-half column">
+                <h5>Screenshot:</h5>
+                <a href="lessons/base-site-subpage/index.html">
+                  <img src="img/base-site-subpage-about.jpg" alt="Base Site Screenshot" width="1280" height="720">
+                </a>
+                <p>
+                  <a class="button" href="lessons/base-site-subpage/about.html">About Pg Demo</a>
+                  <a class="button" href="lessons/base-site-subpage/contact.html">Contact Pg Demo</a>
+                  <a class="button" href="lessons/base-site-subpage/subpage-withsidebar.html">Sub Pg w/ Sidebar Demo</a>
+                  <!-- <a class="button alt" href="https://www.youtube.com/watch?v=dTj4JlIgY2Y">About Pg. Video Lesson</a>
+                  <a class="button alt" href="https://www.youtube.com/watch?v=Snx4GYh8odA">Contact Pg. Video Lesson</a> -->
+                </p>
+
+                <!--<h5>Video Lesson:</h5>
+                            <div class="video">
+                                <iframe width="1280" height="720" src="http://www.youtube.com/embed/Dt5YltgtyvA?rel=0" frameborder="0" allowfullscreen></iframe>
+                            </div>-->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="singlepagesite" class="accordian">
+          <h4>Step 7 <span class="light nomobile">Single Page Site</span>
+            <div class="arrow"></div>
+          </h4>
+          <div class="collapsible">
+
+            <div class="row">
+              <div class="one-half column">
+                <h5>Description:</h5>
+                <p>Create a single page web site with multiple sub sections that can be accessed either via the inline
+                  page anchors in the site navigation or by scrolling the long, vertical layout of the page.</p>
+                <ol>
+
+                  <li>Working with one main index.html file, update the site navigation to link to page anchors (ID's)
+                    for each of the main sub sections (e.g. a href="#section1" or href="#about")</li>
+                  <li>Add ID's to all main sub sections (e.g. section id="section1" or id="about")</li>
+                  <li>Once the page anchors are tested and working, use javascript to add animation
+                    <ul>
+                      <li>add this <a href="https://raw.githubusercontent.com/kccnma/sitebase/master/docs/examples/sitename-singlepagesite/js/scroll.js">scroll.js</a>
+                        file
+                        to your js folder, or use <a href="https://github.com/bendc/anchor-scroll">the original
+                          anchor-scroll</a> js code from Benjamin De Cock
+                      </li>
+                      <li>add a link to scroll.min.js file at the bottom of your html file</li>
+                      <li>add a class="scroll" to each link that will utilize scroll.js</li>
+                    </ul>
+                  </li>
+                </ol>
+                <a class="button" href="../examples/sitename-singlepagesite.zip">Download Zip</a>
+                <a class="button alt" href="https://github.com/kccnma/sitebase2/tree/master/docs/examples/sitename-singlepagesite">View
+                  Source</a>
+              </div>
+              <div class="one-half column">
+                <h5>Screenshot:</h5>
+                <a href="../base-site-singlepagesite/index.html"><img src="img/base-site-singlepagesite.jpg" alt="Base Site Screenshot" width="1280" height="720"></a>
+                <a class="button" href="examples/sitename-singlepagesite/index.html">View Demo</a>
+                <!-- <a class="button alt" href="https://www.youtube.com/watch?v=9zZOcU2ua-I">View Single Page Site Video
+                  Lesson</a> -->
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="customsite" class="accordian">
+          <h4>
+            Step 8 <span class="light nomobile">Custom Site</span>
+            <div class="arrow"></div>
+          </h4>
+          <div class="collapsible">
+            <p>
+              Override the base styling with site-specific styling and custom
+              HTML, CSS, &amp; JS.
+            </p>
+            <ol>
+              <li>
+                Add a section entitled "SITE SPECIFIC CSS" to the bottom of
+                your base style.css file and use this area to add any custom
+                site-specific (e.g. project-specific, client-specific, etc)
+                styling. Try not to edit your "BASE CSS" above. Instead, try
+                to <em>override</em> the base styles at the bottom of your
+                style sheet in this designated area that is seperate from your
+                base styles.
+              </li>
+              <li>
+                Style (CSS) changes to consider:
+                <ul>
+                  <li>Customize the typography.</li>
+                  <li>Use a custom color palette</li>
+                  <li>
+                    Consider adding aesthetic graphical elements such as line,
+                    shape, texture, and background photography.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Content (HTML) changes to consider:
+                <ul>
+                  <li>
+                    Change the header and brand identity of the site (e.g.
+                    change the site name, add a logo, add a tagline, etc.).
+                  </li>
+                  <li>Use real content (no placeholder photos or copy).</li>
+                  <li>
+                    Consider using a "content-first" approach to establish a
+                    strong content hierarchy, information architecture (IA),
+                    and navigation.
+                  </li>
+                  <li>
+                    Use your grid (rows and columns) to experiment with
+                    different layouts to best present the content.
+                  </li>
+                  <li>
+                    Utilize and embrace known good usability practices, UX
+                    design patterns, and UI components.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sitebase2">
+      <div class="container">
+        <h3>SiteBase2 Sassy Lessons</h3>
+        <p>
+          The SiteBase2 SCSS variation builds upon the core SiteBase2 static code by adding support for SASS (specifically SCSS).
+          Designed for those with a basic understanding of how to build a
+          static site with straight-up HTML, CSS, and JS, looking for an
+          intermediate-level front-end workflow and build environment that is
+          not too complicated or advanced. No command line (CLI) required for the SCSS
+          version. Instead, the GUI-based software application Prepros is
+          used to manage all build tasks (e.g. to compile SASS) and for
+          deployment.
+        </p>
+
+        <div class="accordian">
+          <h4>
+            Lesson
+            <span class="light nomobile">Modular SASS Partials (via Prepros)</span>
+            <div class="arrow"></div>
+          </h4>
+          <div class="collapsible">
+            <div class="row">
+              <div class="one-half column">
+                <h5>Description:</h5>
+                <p>
+                  In this lesson, we will convert SiteBase2 Static into Sitebase2 SCSS
+                  (a "Sassy" version) by working backwards, starting with the static css
+                  stylesheet and converting the single-file CSS system into an
+                  organized multi-file SASS system via partials.
+                </p>
+                <ol>
+                  <li>
+                    <strong>Setup a local front-end web development environment to
+                      compile SASS.</strong>
+                    In this step, we will use a Prepros, a GUI-based
+                    front-end compiler. In another lesson, we will use Gulp.
+                  </li>
+                  <li>
+                    <strong>Establish a custom organizational file system</strong>
+                    using SASS partials that embraces best practices and
+                    strategies from popular CSS methodologies (e.g. SMACSS).
+                  </li>
+                  <li>
+                    <strong>Convert the CSS to SCSS</strong> by reverse
+                    engineering the original, singular CSS file and separating
+                    it into a modular system of multiple SCSS partial files.
+                    The new SCSS files will embrace SASS features to improve
+                    the coding experience, such as variables and nesting.
+                  </li>
+                </ol>
+                <a class="button" href="variations/sitebase2-scss.zip">Download SiteBase2 SCSS Version Zip</a>
+              </div>
+              <div class="one-half column">
+                <h5>Screenshot:</h5>
+                <a href="documentation.html#scss">
+                  <img src="img/base-site-sasspartials.jpg" alt="Base Blank Starter" width="1280" height="720">
+                </a>
+                <p>
+                  <a class="button" href="variations/sitebase2-static/index.html">View Demo</a>
+                  <a class="button alt" href="https://www.creativemedia.space/lessons/intro-to-sass-via-prepros/">Related
+                    Lesson</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <nav class="site-navigation">
+        <ul class="nav">
+          <li><a href="../index.html">SiteBase2 Home</a></li>
+          <li class="selected"><a href="lessons.html">Lessons</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
+          <li><a href="examples.html">Examples</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- END CONTAINER -->
+  </footer>
+
+  <!-- MAIN JS -->
+  <script src="js/script.js"></script>
+
+  <script>
+    // Get hash from query string and open the accordian
+    var hash = window.location.hash.substring(1);
+    var target = document.getElementById(hash);
+    if (hash) {
+      document.getElementById(hash).className += " open";
+    }
+  </script>
+</body>
+
+</html>

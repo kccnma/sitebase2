@@ -1,0 +1,35 @@
+/* Image Floats */
+img.float-left {
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  clear: both;
+}
+img.float-left ~ * {
+  margin-top: 0;
+}
+
+/* Clear Floats */
+.group::after {
+  content: "";
+  display: table;
+  clear: both;
+} 
+
+/* Circular images */
+img.circular {
+  border-radius: 100%;
+} 
+
+/* Social Icons */ 
+.social-icons {
+  --social-icons-color: #333;
+  display: inline-block;
+}
+
+.social-icons svg {
+  max-height: 30px;
+  fill: var(--social-icons-color);
+}
+ 
+

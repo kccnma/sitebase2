@@ -28,6 +28,11 @@ $ npm run dev
 ## Updates
 - 01-24-25
   - initital migration of source code from SiteBase1
+- 01-27-25
+  - updated lessons 1b-6
+  - added a new globals step (1b)
+  - added a starter set of variables via css custom properties
+  - updated the flexbox grid system using gap and a css custom property for the grid gap
 
 
 ## Known Issues

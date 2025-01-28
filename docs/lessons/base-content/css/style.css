@@ -69,9 +69,9 @@ body {
 a {
   /* SET THE COLOR OF ALL TEXT LINKS */
   color: var(--color-links);
-  /* SET THE COLOR OF ALL HOVER STATES ON TEXT LINKS */
 }
 a:hover {
+  /* SET THE COLOR OF ALL HOVER STATES ON TEXT LINKS */
   color: var(--color-links-darker);
 }
 
@@ -167,6 +167,16 @@ a:hover {
   color: var(--color-links-darker);
 }
 
+/* TEXT CENTERING HELPER CLASS */
+.text-centered {
+  text-align: center;
+}
+
+.text-centered p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* #MEDIA  */
 /* #IMAGES */
 img {
@@ -178,25 +188,6 @@ img {
 video {
   max-width: 100%;
   height: auto;
-}
-
-/* VIDEO HELPER CLASS */
-/* Use this optional class="video" helper class for 16:9 iframe videos only, or adjust the aspect ration manually below via the bottom padding */
-.video {
-  width: 100%;
-  position: relative;
-  padding-bottom: 56.25%;
-  /* 16:9 */
-  padding-top: 25px;
-  height: 0;
-  margin-bottom: 1em;
-}
-.video iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 /* #COMPONENTS  */

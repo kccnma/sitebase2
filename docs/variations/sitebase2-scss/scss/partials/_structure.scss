@@ -97,40 +97,22 @@ section {
 }
 
 /* Hero Sections */
-.container .hero {
-  position: relative;
-  top: 2em;
-  margin-bottom: 3em;
-}
+// .container .hero {
+//   position: relative;
+//   top: 2em;
+//   margin-bottom: 3em;
+// }
 .hero {
   background: $background-color-hero;
   border-top: none;
   //border-bottom: 1px solid $border-color;
-  padding: 4em 1em 3em 1em;
+  padding: 4em 1em 3em 1em; 
   margin-bottom: 1.5em;
 
   h1,
   h2 {
     font-size: 3em;
-    line-height: 1.1em;
-    max-width: 10em;
-  }
-
-  p {
-    max-width: 30em;
-  }
-
-  &.text-centered {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p {
-      margin-left: auto;
-      margin-right: auto;
-    }
+    line-height: 1.1em; 
   }
 
   &.full-width {

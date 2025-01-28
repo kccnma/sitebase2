@@ -69,8 +69,8 @@ body {
 a {
   /* SET THE COLOR OF ALL TEXT LINKS */
   color: var(--color-links);
-  /* SET THE COLOR OF ALL HOVER STATES ON TEXT LINKS */
 }
 a:hover {
+  /* SET THE COLOR OF ALL HOVER STATES ON TEXT LINKS */
   color: var(--color-links-darker);
 }

@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /* #BASE CSS (Initital Setup)
 ---------------------------------
+    #GLOBAL SETTINGS
+        # GLOBAL VARIABLES
+        # GLOBAL RESETS
+        # GLOBAL COLORS
     #BASE CONTENT
         #TYPOGRAPHY
             #BODY
@@ -29,40 +33,76 @@
             #SUB PAGES
                 #...
 --------------------------------- */
-/* #TYPOGRAPHY  */
-/* Reference
-	62.5%  => 10px
-	68.8%  => 11px
-	75%    => 12px
-	81.3%  => 13px
-	87.5%  => 14px
-	100%   => 16px
-	112.5% => 18px
-	125%   => 20px
-*/
-body {
-  font-family: system-ui, Helvetica, Arial, sans-serif;
-  color: #333;
-  font-size: 100%;
-  /* 16px; */
-  line-height: 1.5;
-  /* 16px x 1.5 = 24px */
+/* ----------------------------- */
+/* ----- GLOBAL STYLING -------- */
+/* ----------------------------- */
+/* SET GLOBAL VARIABLES */
+:root {
+  /* BASE COLORS */
+  --color-body-background: rgb(255, 255, 255);
+  --color-text-body: rgba(0, 0, 0, 0.8);
+  --color-links: rgb(0, 51, 102);
+  --color-links-darker: rgb(0, 0, 51);
+  /* BASE TYPOGRAPHY */
+  --font-body: system-ui, Helvetica, Arial, sans-serif;
+  --font-headings: system-ui, Helvetica, Arial, sans-serif;
 }
 
-/* #HEADINGS
-    Based on a Traditional Typographic Scale
-    48, 36, 24, 21, 18, 16
-*/
+/* GLOBAL RESETS */
+/* CHANGE BOX-SIZING FOR ALL TO BORDER-BOX */
+* {
+  box-sizing: border-box;
+}
+
+/* REMOVE THE DEFAULT 8px MARGIN ON THE BODY */
+body {
+  margin: 0;
+}
+
+/* GLOBAL COLORS */
+body {
+  /* SET THE COLOR OF THE MAIN BODY BACKGROUND */
+  background-color: var(--color-body-background);
+  /* SET THE COLOR OF THE MAIN BODY TEXT */
+  color: var(--color-text-body);
+}
+
+a {
+  /* SET THE COLOR OF ALL TEXT LINKS */
+  color: var(--color-links);
+  /* SET THE COLOR OF ALL HOVER STATES ON TEXT LINKS */
+}
+a:hover {
+  color: var(--color-links-darker);
+}
+
+/* SET GLOBAL TYPOGRAPHY */
+/* # GLOBAL BODY FONT SETTINGS */
+body {
+  /* SET THE DEFAUT FONT FAMILY FOR ALL MAIN BODY TEXT */
+  font-family: var(--font-body);
+  /* SET THE DEFAULT FONT SIZE ALL MAIN BODY TEXT */
+  font-size: 100%;
+  /* 16px; */
+  /* SET THE DEFAULT LEADING (LINE-HEIGHT) FOR ALL BODY TEXT */
+  line-height: 1.4;
+}
+
+/* # GLOBAL HEADING SETTINGS */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: system-ui, Helvetica, Arial, sans-serif;
+  /* SET THE DEFAUT FONT FAMILY FOR ALL HEADINGS */
+  font-family: var(--font-headings);
+  /* SET THE DEFAUT MARGINS ALL HEADINGS */
   margin: 0.5em 0;
 }
 
+/* SET THE DEFAULT TYPOGRAPHIC SCALE FOR ALL HEADINGS 
+   (e.g. a "Traditional" Scale) */
 h1 {
   font-size: 3em;
   /* 48px / 16px = 3em */
@@ -99,56 +139,41 @@ h6 {
   line-height: 1.5;
 }
 
-/* #PARAGRAPHS */
+/* # GLOBAL PARAGRAPH SETTINGS */
 p {
+  /* SET THE DEFAUT MARGINS ALL PARAGRAPHS */
   margin: 0.5em 0;
-  max-width: 38em;
+  /* SET THE NUMBER OF CHARACTERS PER LINE */
+  max-width: 65ch;
+  /* WIDOW FIXER */
+  text-wrap: pretty;
 }
 
-.centered p {
-  margin-left: auto;
-  margin-right: auto;
-}
-
+/* SET THE DEFAUT WEIGHT FOR BOLD/STRONG TEXT */
 strong {
   font-weight: 700;
 }
 
+/* SET THE DEFAUT STYLING FOR ITALIC/EMPASIZED TEXT */
 em {
   font-style: italic;
 }
 
 /* #LINKS */
 a {
-  color: #036;
+  color: var(--color-links);
 }
 
 a:hover {
-  color: #003;
-  text-decoration: underline;
+  color: var(--color-links-darker);
 }
 
-/* #BLOCK QUOTES  */
-blockquote {
-  font-size: 1.142em;
-  margin: 1.5em 0;
-  padding: 1.5em;
-  border-top: 0px solid #ccc;
-  border-bottom: 0px solid #ccc;
+/* #TYPOGRAPHY HELPERS */
+.centered p {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-blockquote cite {
-  display: block;
-  opacity: 0.8;
-  font-size: 0.875em;
-}
-
-blockquote cite:before {
-  content: "—";
-  margin-right: 0.25em;
-}
-
-/* #HELPERS */
 .text-centered {
   text-align: center;
 }
@@ -307,8 +332,8 @@ button {
 button,
 a.button {
   display: inline-block;
-  background-color: #036;
-  border: 1px solid #036;
+  background-color: var(--color-links);
+  border: 1px solid var(--color-links);
   color: #fff;
   padding: 0.75em 1em;
   border-radius: 0.32em;
@@ -323,15 +348,15 @@ a.button {
 button.alt,
 a.button.alt {
   background-color: transparent;
-  border: 1px solid #036;
-  color: #036;
+  border: 1px solid var(--color-links);
+  color: var(--color-links);
 }
 
 button:hover,
 a.button:hover {
-  background-color: #003;
+  background-color: var(--color-links-darker);
   color: #fff;
-  border-color: #003;
+  border-color: var(--color-links-darker);
   text-decoration: none;
 }
 
@@ -430,15 +455,20 @@ body {
   padding: 0 1em;
 }
 
-/* SMALL- MEDIA QUERY (e.g. for mobile overrides) */
-@media (max-width: 767px) {
-  /* Inherits Small/Mobile Body Type from Above */
-  /* Inherits Small/Mobile Fluid Width from Above */
+/* SET YOUR BODY TEXT TO BE RESPONSIVE 
+  - Small screens: 14px;
+  - Medium Screens: 16px;
+  - Large Screens: 18px;
+*/
+/* MOBILE FIRST (DEFAULT) */
+body {
+  font-size: 87.5%;
+  /* 14px; */
 }
+
 /* #MEDIUM+ MEDIA QUERY */
 @media (min-width: 768px) {
   /* Inherits Small/Mobile Body Type from Above */
-  /* Inherits Small/Mobile Fluid Width from Above */
 }
 /* #LARGE+ MEDIA QUERY */
 @media (min-width: 1050px) {
@@ -461,54 +491,58 @@ body {
     max-width: 1200px;
   }
 }
-/* Grid */
-section,
-.container {
-  overflow-x: hidden;
+/* SEMANTIC GRID USING CSS FLEX BOX */
+.row {
+  --gridgap: 4%;
+}
+
+.row > * {
+  margin-bottom: var(--gridgap);
 }
 
 @media (min-width: 768px) {
   .row {
-    margin-left: -2%;
-    margin-right: -2%;
     display: flex;
-    flex-wrap: wrap;
-  }
-  .row.swapped {
-    flex-direction: row-reverse;
-  }
-  .row.centered {
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    gap: var(--gridgap);
   }
 
-  .row > .column {
-    margin: 0 2% 2% 2%;
-    flex-grow: 1;
+  .row > .one-whole {
+    width: 100%;
   }
-  .row > .column.one-half {
-    max-width: 46%;
+
+  .row > .one-half {
+    width: calc(50% - var(--gridgap) / 2);
   }
-  .row > .column.one-third {
-    max-width: 29.3333%;
+
+  .row > .one-third {
+    width: calc(33.3333% - var(--gridgap) / 1.5);
   }
-  .row > .column.two-thirds {
-    max-width: 62.6666%;
+
+  .row > .two-thirds {
+    width: calc(66.6666% - var(--gridgap) / 3);
   }
-  .row > .column.one-fourth {
-    max-width: 21%;
+
+  .row > .one-fourth {
+    width: calc(25% - var(--gridgap) / 1.5);
   }
-  .row > .column.three-fourths {
-    max-width: 71%;
+
+  .row > .three-fourths {
+    width: calc(75% - var(--gridgap) / 2.5);
   }
-  .row > .column.push-one-third {
-    margin-left: 35.3333%;
+
+  .row > .push-one-half {
+    margin-left: calc(50% - var(--gridgap) / 2 + var(--gridgap));
   }
-  .row > .column.push-one-fourth {
-    margin-left: 27%;
+
+  .row > .push-one-third {
+    margin-left: calc(33.3333% - var(--gridgap) / 1.5 + var(--gridgap));
   }
-  .row > .column.centered {
+
+  .row > .push-one-fourth {
+    margin-left: calc(25% - var(--gridgap) / 1.5 + var(--gridgap));
+  }
+
+  .row > .centered {
     margin-left: auto;
     margin-right: auto;
   }
@@ -1191,8 +1225,5 @@ main {
 
 /* #SITE SPECIFIC CUSTOM CSS (e.g. Base Overrides)
 ---------------------------------
-	#TYPOGRAPHY OVERRIDES
-		#BODY
-		#HEADINGS
 		...
 --------------------------------- */

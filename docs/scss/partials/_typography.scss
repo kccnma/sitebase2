@@ -1,34 +1,36 @@
-/* #TYPOGRAPHY  */
-/* Reference
-	62.5%  => 10px
-	68.8%  => 11px
-	75%    => 12px
-	81.3%  => 13px
-	87.5%  => 14px
-	100%   => 16px
-	112.5% => 18px
-	125%   => 20px
-*/
+/* SET GLOBAL TYPOGRAPHY */
+
+/* # GLOBAL BODY FONT SETTINGS */
 body {
-  font-family: $body-font-family;
-  color: $text-color;
+
+  /* SET THE DEFAUT FONT FAMILY FOR ALL MAIN BODY TEXT */
+  font-family: var(--font-body);
+
+  /* SET THE DEFAULT FONT SIZE ALL MAIN BODY TEXT */
   font-size: 100%; /* 16px; */
-  line-height: 1.5; /* 16px x 1.5 = 24px */
+
+  /* SET THE DEFAULT LEADING (LINE-HEIGHT) FOR ALL BODY TEXT */
+  line-height: 1.4;
+
 }
 
-/* #HEADINGS
-    Based on a Traditional Typographic Scale
-    48, 36, 24, 21, 18, 16
-*/
+/* # GLOBAL HEADING SETTINGS */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: $heading-font-family;
+
+  /* SET THE DEFAUT FONT FAMILY FOR ALL HEADINGS */
+  font-family: var(--font-headings);
+
+  /* SET THE DEFAUT MARGINS ALL HEADINGS */
   margin: 0.5em 0;
 }
+
+/* SET THE DEFAULT TYPOGRAPHIC SCALE FOR ALL HEADINGS 
+   (e.g. a "Traditional" Scale) */
 
 h1 {
   font-size: 3em; /* 48px / 16px = 3em */
@@ -60,88 +62,35 @@ h6 {
   line-height: 1.5;
 }
 
-/* #PARAGRAPHS */
+/* # GLOBAL PARAGRAPH SETTINGS */
 p {
+
+  /* SET THE DEFAUT MARGINS ALL PARAGRAPHS */
   margin: 0.5em 0;
-  max-width: 38em; 
-}
-.centered p {
-  margin-left: auto;
-  margin-right: auto;
+
+  /* SET THE NUMBER OF CHARACTERS PER LINE */
+  max-width: 65ch;
+
+  /* WIDOW FIXER */
+  text-wrap: pretty; 
+
 }
 
+/* SET THE DEFAUT WEIGHT FOR BOLD/STRONG TEXT */
 strong {
   font-weight: 700;
 }
 
+/* SET THE DEFAUT STYLING FOR ITALIC/EMPASIZED TEXT */
 em {
   font-style: italic;
 }
 
 /* #LINKS */
 a {
-  color: $link-color;
-  // text-decoration: none;
+  color: var(--color-links);
 }
 
 a:hover {
-  color: $link-color-dark;
-  text-decoration: underline;
-}
-
-/* #BLOCK QUOTES  */
-blockquote {
-  font-size: 1.142em;
-  margin: 1.5em 0;
-  padding: 1.5em;
-  border-top: $border-width solid $border-color;
-  border-bottom: $border-width solid $border-color;
-}
-
-blockquote cite {
-  display: block;
-  opacity: 0.8;
-  font-size: 0.875em;
-}
-
-blockquote cite:before {
-  content: "\2014";
-  margin-right: 0.25em;
-}
-
-/* #HELPERS */
-.text-centered {
-  text-align: center;
-}
-
-.full-width {
-  max-width: none;
-  width: 100%;
-}
-
-.horiz-center {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hidden {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
-
-.subheader {
-  color: $text-color-light;
-  margin-top: 1em;
-  font-style: normal;
-  font-weight: normal;
-  clear: both;
-}
-
-/* HORIZONTAL RULES */
-hr {
-  border: 0;
-  height: 1px;
-  background: #ddd;
-  margin: 2em 0; 
+  color: var(--color-links-darker);
 }

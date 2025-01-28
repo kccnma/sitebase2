@@ -7,8 +7,8 @@ button {
 button,
 a.button {
   display: inline-block;
-  background-color: $link-color;
-  border: 1px solid $link-color;
+  background-color: var(--color-links);
+  border: 1px solid var(--color-links);
   color: #fff;
   padding: 0.75em 1em;
   border-radius: 0.32em;
@@ -23,14 +23,14 @@ a.button {
 button.alt,
 a.button.alt {
   background-color: transparent;
-  border: 1px solid $link-color;
-  color: $link-color;
+  border: 1px solid var(--color-links);
+  color: var(--color-links);
 }
 
 button:hover,
 a.button:hover {
-  background-color: $link-color-dark;
+  background-color: var(--color-links-darker);
   color: #fff;
-  border-color: $link-color-dark;
+  border-color: var(--color-links-darker);
   text-decoration: none;
 }

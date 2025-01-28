@@ -1,0 +1,51 @@
+/* ----------------------------- */
+/* ----- GLOBAL STYLING -------- */
+/* ----------------------------- */
+
+/* SET GLOBAL VARIABLES */
+:root {
+
+    /* BASE COLORS */
+    --color-body-background: rgb(255, 255, 255);
+    --color-text-body: rgba(0, 0, 0, 0.8);
+
+    --color-links: rgb(0, 51, 102);
+    --color-links-darker: rgb(0, 0, 51);
+
+    /* BASE TYPOGRAPHY */
+    --font-body: system-ui, Helvetica, Arial, sans-serif;
+    --font-headings: system-ui, Helvetica, Arial, sans-serif;
+
+}
+
+
+/* GLOBAL RESETS */
+
+/* CHANGE BOX-SIZING FOR ALL TO BORDER-BOX */
+* { box-sizing: border-box; }
+
+/* REMOVE THE DEFAULT 8px MARGIN ON THE BODY */
+body { margin: 0; }
+
+
+/* GLOBAL COLORS */
+body {
+
+    /* SET THE COLOR OF THE MAIN BODY BACKGROUND */
+    background-color: var(--color-body-background);
+
+    /* SET THE COLOR OF THE MAIN BODY TEXT */
+    color: var(--color-text-body);
+
+}
+
+a {
+    /* SET THE COLOR OF ALL TEXT LINKS */
+    color: var(--color-links);
+
+    /* SET THE COLOR OF ALL HOVER STATES ON TEXT LINKS */
+    &:hover {
+        color: var(--color-links-darker);
+    }
+
+}

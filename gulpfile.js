@@ -75,8 +75,9 @@ function watch_files() {
       baseDir: "./"
     }
   });
-  gulp.watch("./index.html", html).on("change", browserSync.reload);
+  gulp.watch("index.html", html).on("change", browserSync.reload);
   gulp.watch("src/*.html", html).on("change", browserSync.reload);
+  gulp.watch("docs/*.html", html).on("change", browserSync.reload);
   gulp.watch("src/scss/**/*.scss", css);
   gulp.watch("src/js/*.js", js).on("change", browserSync.reload);
   gulp.watch("src/**/*.+(png|jpg|jpeg|gif|svg)", imageMin).on("change", browserSync.reload);
@@ -93,6 +94,7 @@ exports.build = parallel(html, css, js, imageMin);
 // ******* END STANDARD SiteBase GULP CONFIG *******
 //
 //
+
 
 
 
@@ -179,6 +181,15 @@ function sasslesson1(cb) {
   cb();
 }
 
+// SASS LESSON1b
+function sasslesson1b(cb) {
+  gulp.src("docs/lessons/base-globals.scss")
+    .pipe(sass(sassOptions))
+    .pipe(rename("css/style.css"))
+    .pipe(gulp.dest("docs/lessons/base-globals/"));
+  cb();
+}
+
 // SASS LESSON2
 function sasslesson2(cb) {
   gulp.src("docs/lessons/base-content.scss")
@@ -199,10 +210,10 @@ function sasslesson3(cb) {
 
 // SASS LESSON4
 function sasslesson4(cb) {
-  gulp.src("docs/lessons/base-site.scss")
+  gulp.src("docs/lessons/base-site-structure.scss")
     .pipe(sass(sassOptions))
     .pipe(rename("css/style.css"))
-    .pipe(gulp.dest("docs/lessons/base-site/"));
+    .pipe(gulp.dest("docs/lessons/base-site-structure/"));
   cb();
 }
 
@@ -217,10 +228,10 @@ function sasslesson5(cb) {
 
 // SASS LESSON6
 function sasslesson6(cb) {
-  gulp.src("docs/lessons/base-site-subpage.scss")
+  gulp.src("docs/lessons/base-site-subpages.scss")
     .pipe(sass(sassOptions))
     .pipe(rename("css/style.css"))
-    .pipe(gulp.dest("docs/lessons/base-site-subpage/"));
+    .pipe(gulp.dest("docs/lessons/base-site-subpages/"));
   cb();
 }
 
@@ -229,6 +240,14 @@ function sasslesson6(cb) {
 function ziplesson1(cb) {
   gulp.src("docs/lessons/base-boilerplate/**/*")
     .pipe(zip("base-boilerplate.zip"))
+    .pipe(gulp.dest("docs/lessons/"));
+  cb();
+}
+
+// ZIP LESSON1B
+function ziplesson1b(cb) {
+  gulp.src("docs/lessons/base-globals/**/*")
+    .pipe(zip("base-globals.zip"))
     .pipe(gulp.dest("docs/lessons/"));
   cb();
 }
@@ -251,8 +270,8 @@ function ziplesson3(cb) {
 
 // ZIP LESSON4
 function ziplesson4(cb) {
-  gulp.src("docs/lessons/base-site/**/*")
-    .pipe(zip("base-site.zip"))
+  gulp.src("docs/lessons/base-site-structure/**/*")
+    .pipe(zip("base-site-structure.zip"))
     .pipe(gulp.dest("docs/lessons/"));
   cb();
 }
@@ -267,8 +286,8 @@ function ziplesson5(cb) {
 
 // ZIP LESSON6
 function ziplesson6(cb) {
-  gulp.src("docs/lessons/base-site-subpage/**/*")
-    .pipe(zip("base-site-subpage.zip"))
+  gulp.src("docs/lessons/base-site-subpages/**/*")
+    .pipe(zip("base-site-subpages.zip"))
     .pipe(gulp.dest("docs/lessons/"));
   cb();
 }
@@ -314,7 +333,7 @@ function zipexample3(cb) {
 }
 
 // WATCH DOCS
-const doc_series = [html, css, js, imageMin, copyhtmlroot, copysassroot, copyjsroot, copyimagesroot, sassroot, sasslesson1, sasslesson2, sasslesson3, sasslesson4, sasslesson5, sasslesson6, ziplesson1, ziplesson2, ziplesson3, ziplesson4, ziplesson5, ziplesson6, zipvariation1, zipvariation2, zipexample1, zipexample2, zipexample3];
+const doc_series = [html, css, js, imageMin, copyhtmlroot, copysassroot, copyjsroot, copyimagesroot, sassroot, sasslesson1, sasslesson1b, sasslesson2, sasslesson3, sasslesson4, sasslesson5, sasslesson6, ziplesson1, ziplesson1b, ziplesson2, ziplesson3, ziplesson4, ziplesson5, ziplesson6, zipvariation1, zipvariation2, zipexample1, zipexample2, zipexample3];
 
 function watch_docs() {
   browserSync.init({

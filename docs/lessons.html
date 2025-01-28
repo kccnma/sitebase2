@@ -35,7 +35,7 @@
     <section class="hero text-centered">
       <h2>SiteBase2 Lessons</h2>
       <p>
-        This page contains a step-by-step guide to manually recode SiteBase2 from scratch, by hand, as a way to learn the basics of front-end development.
+        This page contains a step-by-step lessons to manually recode SiteBase2 from scratch, by hand, as a way to learn the basics of front-end development.
       </p>
     </section>
 
@@ -103,6 +103,68 @@
           </div>
         </div>
 
+        <div id="baseglobals" class="accordian">
+          <h4>
+            Step 1B <span class="light nomobile">Base Globals</span>
+            <div class="arrow"></div>
+          </h4>
+          <div class="collapsible">
+            <div class="row">
+              <div class="one-half column">
+                <h5>Description:</h5>
+                <p>
+                  A general best-practice is to set any global-level (site-wide) styling at the top of your style.css document. This approach allows for the writing of DRY ("Don't Repeat Yourself") code and takes advantage of helpful CSS features such as inheritance via the cascade (The "C" is "CSS"). Examples of global settings include site-wide resets (e.g. the removal of body margins and setting the box-sizing defaults for all elements), css custom properties (defining any reusable site-wide variables such as commonly used colors, fonts, and spacing units), and any high-level/site-wide styles for commonly used elements, such as the body background and text colors, link colors, and font settings for headings that will be commonly re-used across the site.
+                </p>
+                <ol>
+                  <li>
+                    Duplicate your "base-boilerplate" folder and rename it to
+                    "base-globals"
+                  </li>
+                  <li>
+                    Delete your "js" folder and link to it (we will add it
+                    back later)
+                  </li>
+                  <li>
+                    Add some temporary initial starter content to your index.html file that will allow you to see the impact of your global styles to your style.css file:
+                    <ul>
+                      <li>
+                        Temporary starter content:
+                        <ul>
+                          <li>
+                            Headings (h1-h6), paragraphs (at least two), and commonly used inline text markup, such as links, bold text, and italic text.
+                          </li>
+                        </ul>
+                      </li>
+                      <li>Global Styles to include
+                        <ul>
+                          <li>Global variables: define a basic starter set of commonly used custom properties that you will likley need, such as site-wide colors and fonts.</li>
+                          <li>Global resets: remove the default body margins and set the box-sizing defaults for all elements to border-box.</li>
+                          <li>Global colors: set the colors for common elements such as the body background color, text color, and link colors.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ol>
+                <a class="button" href="lessons/base-globals.zip">Download Zip</a>
+                <a class="button alt" href="https://github.com/kccnma/sitebase2/tree/master/docs/lessons/base-globals">View
+                  Source</a>
+
+              </div>
+              <div class="one-half column">
+                <h5>Screenshot:</h5>
+                <a href="lessons/base-globals/index.html">
+                  <img src="img/base-globals.jpg" alt="Base Globals" width="1280" height="720">
+                </a>
+                <p>
+                  <a class="button" href="lessons/base-globals/index.html">View Demo</a>
+                  <!-- <a class="button alt" href="https://youtu.be/EaWGweTzIZk">View Video Lesson</a> -->
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div id="basecontent" class="accordian">
           <h4>
             Step 2 <span class="light nomobile">Base Content</span>
@@ -121,36 +183,30 @@
                 </p>
                 <ol>
                   <li>
-                    Duplicate your "base-boilerplate" folder and rename it to
+                    Duplicate your "base-globals" folder and rename it to
                     "base-content"
                   </li>
                   <li>
-                    Delete your "js" folder and link to it (we will add it
-                    back later)
-                  </li>
-                  <li>
-                    Add base content markup to your index.html file and base
+                    Add more starter/base content markup to your index.html file and accompanying base
                     content styles to your style.css file:
                     <ul>
                       <li>
                         Base Typography
                         <ul>
-                          <li>
-                            Body, Headings, Paragraphs, Links, <del>Lists</del>,
-                            Blockquotes, &amp; Helpers
-                          </li>
+                          <li>Add all headings h1-h6 and manually set the default typographic scale.</li>
+                          <li>Add two sets of lists: unordered and ordered (no styling needed).</li>
                         </ul>
                       </li>
                       <li>
-                        Base Media
+                        Base Media (Responsive)
                         <ul>
-                          <li>Images</li>
+                          <li>Add an inline image with global styling for all images to be responsive by default.</li>
                         </ul>
                       </li>
                       <li>
                         Base Components
                         <ul>
-                          <li>Buttons</li>
+                          <li>Buttons (it is optional to add an alternate style/version).</li>
                         </ul>
                       </li>
                     </ul>
@@ -200,10 +256,8 @@
                     markup
                   </li>
                   <li>
-                    Add a simple reset, media queries, and a simple grid to your style.css file
+                    Add a basic set of media queries and a simple grid to your style.css file
                     <ul>
-                      <li>Simple Reset (set all elements to box-sizing: border-box and remove your default body margins)
-                      </li>
                       <li>
                         Media Queries (with body font-size settings and a
                         "container" with a fixed width for large screens and
@@ -252,7 +306,7 @@
                 <ol>
                   <li>
                     Duplicate your "base-layout" folder and rename it to
-                    "base-site"
+                    "base-structure"
                   </li>
                   <li>
                     Remove all content from index.html and add base structural
@@ -282,17 +336,17 @@
                     </ul>
                   </li>
                 </ol>
-                <a class="button" href="lessons/base-site.zip">Download Zip</a>
-                <a class="button alt" href="https://github.com/kccnma/sitebase2/tree/master/docs/lessons/base-site">View
+                <a class="button" href="lessons/base-site-structure.zip">Download Zip</a>
+                <a class="button alt" href="https://github.com/kccnma/sitebase2/tree/master/docs/lessons/base-site-structure">View
                   Source</a>
               </div>
               <div class="one-half column">
                 <h5>Screenshot:</h5>
-                <a href="lessons/base-site/index.html">
-                  <img src="img/base-site.jpg" alt="Base Site Screenshot" width="1280" height="720">
+                <a href="lessons/base-site-structure/index.html">
+                  <img src="img/base-site-structure.jpg" alt="Base Site Structure Screenshot" width="1280" height="720">
                 </a>
                 <p>
-                  <a class="button" href="lessons/base-site/index.html">View Demo</a>
+                  <a class="button" href="lessons/base-site-structure/index.html">View Demo</a>
                   <!-- <a class="button alt" href="https://youtu.be/4VSXy4ey8Pg">View Video Lesson</a> -->
                 </p>
               </div>
@@ -315,6 +369,10 @@
                   navigation for small screen sizes.
                 </p>
                 <ol>
+                  <li>
+                    Duplicate your "base-structure" folder and rename it to
+                    "base-togglenav"
+                  </li>
                   <li>Add back a "js" folder and script.js file</li>
                   <li>Add a "menu" element to your main navigation.</li>
                   <li>
@@ -363,6 +421,10 @@
                 </p>
                 <ol>
                   <li>
+                    Duplicate your "base-togglenav" folder and rename it to
+                    "base-site-subpages"
+                  </li>
+                  <li>
                     Update the index.html page site navigation to link to the
                     following example sub pages;
                     <ul>
@@ -390,19 +452,19 @@
                     </ul>
                   </li>
                 </ol>
-                <a class="button" href="lessons/base-site-subpage.zip">Download Zip</a>
-                <a class="button alt" href="https://github.com/kccnma/sitebase2/tree/master/docs/lessons/base-site-subpage">View
+                <a class="button" href="lessons/base-site-subpages.zip">Download Zip</a>
+                <a class="button alt" href="https://github.com/kccnma/sitebase2/tree/master/docs/lessons/base-site-subpages">View
                   Source</a>
               </div>
               <div class="one-half column">
                 <h5>Screenshot:</h5>
-                <a href="lessons/base-site-subpage/index.html">
+                <a href="lessons/base-site-subpages/index.html">
                   <img src="img/base-site-subpage-about.jpg" alt="Base Site Screenshot" width="1280" height="720">
                 </a>
                 <p>
-                  <a class="button" href="lessons/base-site-subpage/about.html">About Pg Demo</a>
-                  <a class="button" href="lessons/base-site-subpage/contact.html">Contact Pg Demo</a>
-                  <a class="button" href="lessons/base-site-subpage/subpage-withsidebar.html">Sub Pg w/ Sidebar Demo</a>
+                  <a class="button" href="lessons/base-site-subpages/about.html">About Pg Demo</a>
+                  <a class="button" href="lessons/base-site-subpages/contact.html">Contact Pg Demo</a>
+                  <a class="button" href="lessons/base-site-subpages/subpage-withsidebar.html">Sub Pg w/ Sidebar Demo</a>
                   <!-- <a class="button alt" href="https://www.youtube.com/watch?v=dTj4JlIgY2Y">About Pg. Video Lesson</a>
                   <a class="button alt" href="https://www.youtube.com/watch?v=Snx4GYh8odA">Contact Pg. Video Lesson</a> -->
                 </p>

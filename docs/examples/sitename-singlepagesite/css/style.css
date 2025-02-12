@@ -159,29 +159,18 @@ em {
   font-style: italic;
 }
 
-/* #LINKS */
-a {
-  color: var(--color-links);
-}
-
-a:hover {
-  color: var(--color-links-darker);
-}
-
 /* TEXT CENTERING HELPER CLASS */
 .text-centered {
   text-align: center;
 }
 
 .text-centered p {
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
 }
 
 /* #TYPOGRAPHY HELPERS */
 .centered p {
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
 }
 
 .full-width {
@@ -190,8 +179,7 @@ a:hover {
 }
 
 .horiz-center {
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
 }
 
 .hidden {
@@ -549,8 +537,7 @@ body {
   }
 
   .row > .centered {
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
   }
 }
 /* FOR DEMO PURPOSES ONLY */
@@ -799,7 +786,7 @@ article p + h6 {
 }
 
 .subpage-navigation {
-  font-family: system-ui, Helvetica, Arial, sans-serif;
+  font-family: var(--font-body);
   padding: 0;
 }
 .subpage-navigation ul {
@@ -938,7 +925,7 @@ article p + h6 {
 /* #SITE NAVIGATION  */
 /* Default Site-Navigation Menu (both header & footer) */
 .site-navigation {
-  font-family: system-ui, Helvetica, Arial, sans-serif;
+  font-family: var(--font-body);
 }
 .site-navigation .menu-button {
   display: none;
@@ -975,6 +962,7 @@ article p + h6 {
     align-items: center;
   }
   .site-navigation ul li {
+    /* SUPPORT FOR SITE HEADR NAV BUTTONS */
     /* DROP DOWN MENU */
     /* stack nested lists */
     /* hide nested lists by default */
@@ -1014,6 +1002,7 @@ article p + h6 {
   }
 }
 
+/* STYLING FOR DROP DOWN MENU ITEMS */
 @media (max-width: 767px) {
   .site-navigation ul li,
 .site-navigation ul li ul li {

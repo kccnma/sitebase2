@@ -1,7 +1,6 @@
 /* #TYPOGRAPHY HELPERS */
 .centered p {
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto; 
 }
 
 .full-width {
@@ -10,8 +9,7 @@
 }
 
 .horiz-center {
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto; 
 }
 
 .hidden {

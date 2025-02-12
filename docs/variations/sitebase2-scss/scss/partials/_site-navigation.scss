@@ -1,7 +1,7 @@
 /* #SITE NAVIGATION  */
 /* Default Site-Navigation Menu (both header & footer) */
 .site-navigation { 
-  font-family: $navigation-font-family;
+  font-family: var(--font-body);
 
   .menu-button {
     display: none;
@@ -51,6 +51,7 @@
           margin: 0 0.5em;
           padding: 0.85em 0.5em 0.75em 0.5em;
         }
+        /* SUPPORT FOR SITE HEADR NAV BUTTONS */
         a.button {
           padding: 0.75em 1em;
         }
@@ -95,13 +96,12 @@
   }
 }
 
-// FIX FOR DROP DOWNS 
+/* STYLING FOR DROP DOWN MENU ITEMS */
 @media (max-width: ($breakpoint-small - 1)) {
   .site-navigation ul li,
   .site-navigation ul li ul li {
     display: block;
   }
-
 
   .site-navigation ul li a:hover {
     color: $background-color-header;

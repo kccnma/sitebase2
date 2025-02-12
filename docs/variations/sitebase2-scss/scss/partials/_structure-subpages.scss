@@ -87,7 +87,7 @@ article {
 }
 
 .subpage-navigation {
-  font-family: $navigation-font-family;
+  font-family: var(--font-body);
   padding: 0;
   ul {
     margin: 0;

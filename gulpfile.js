@@ -86,9 +86,6 @@ function watch_files() {
 // Default 'gulp' command with start local server and watch files for changes.
 exports.default = series(html, css, js, imageMin, watch_files);
 
-// 'gulp build' will build all assets but not run on a local server.
-exports.build = parallel(html, css, js, imageMin);
-
 //
 //
 // ******* END STANDARD SiteBase GULP CONFIG *******
@@ -181,8 +178,8 @@ function sasslesson1(cb) {
   cb();
 }
 
-// SASS LESSON1b
-function sasslesson1b(cb) {
+// SASS LESSON2
+function sasslesson2(cb) {
   gulp.src("docs/lessons/base-globals.scss")
     .pipe(sass(sassOptions))
     .pipe(rename("css/style.css"))
@@ -190,8 +187,8 @@ function sasslesson1b(cb) {
   cb();
 }
 
-// SASS LESSON2
-function sasslesson2(cb) {
+// SASS LESSON3
+function sasslesson3(cb) {
   gulp.src("docs/lessons/base-content.scss")
     .pipe(sass(sassOptions))
     .pipe(rename("css/style.css"))
@@ -199,8 +196,8 @@ function sasslesson2(cb) {
   cb();
 }
 
-// SASS LESSON3
-function sasslesson3(cb) {
+// SASS LESSON4
+function sasslesson4(cb) {
   gulp.src("docs/lessons/base-layout.scss")
     .pipe(sass(sassOptions))
     .pipe(rename("css/style.css"))
@@ -208,8 +205,8 @@ function sasslesson3(cb) {
   cb();
 }
 
-// SASS LESSON4
-function sasslesson4(cb) {
+// SASS LESSON5
+function sasslesson5(cb) {
   gulp.src("docs/lessons/base-site-structure.scss")
     .pipe(sass(sassOptions))
     .pipe(rename("css/style.css"))
@@ -217,8 +214,8 @@ function sasslesson4(cb) {
   cb();
 }
 
-// SASS LESSON5
-function sasslesson5(cb) {
+// SASS LESSON6
+function sasslesson6(cb) {
   gulp.src("docs/lessons/base-site-togglenav.scss")
     .pipe(sass(sassOptions))
     .pipe(rename("css/style.css"))
@@ -226,8 +223,8 @@ function sasslesson5(cb) {
   cb();
 }
 
-// SASS LESSON6
-function sasslesson6(cb) {
+// SASS LESSON7
+function sasslesson7(cb) {
   gulp.src("docs/lessons/base-site-subpages.scss")
     .pipe(sass(sassOptions))
     .pipe(rename("css/style.css"))
@@ -244,48 +241,48 @@ function ziplesson1(cb) {
   cb();
 }
 
-// ZIP LESSON1B
-function ziplesson1b(cb) {
+// ZIP LESSON2
+function ziplesson2(cb) {
   gulp.src("docs/lessons/base-globals/**/*")
     .pipe(zip("base-globals.zip"))
     .pipe(gulp.dest("docs/lessons/"));
   cb();
 }
 
-// ZIP LESSON2
-function ziplesson2(cb) {
+// ZIP LESSON3
+function ziplesson3(cb) {
   gulp.src("docs/lessons/base-content/**/*")
     .pipe(zip("base-content.zip"))
     .pipe(gulp.dest("docs/lessons/"));
   cb();
 }
 
-// ZIP LESSON3
-function ziplesson3(cb) {
+// ZIP LESSON4
+function ziplesson4(cb) {
   gulp.src("docs/lessons/base-layout/**/*")
     .pipe(zip("base-layout.zip"))
     .pipe(gulp.dest("docs/lessons/"));
   cb();
 }
 
-// ZIP LESSON4
-function ziplesson4(cb) {
+// ZIP LESSON5
+function ziplesson5(cb) {
   gulp.src("docs/lessons/base-site-structure/**/*")
     .pipe(zip("base-site-structure.zip"))
     .pipe(gulp.dest("docs/lessons/"));
   cb();
 }
 
-// ZIP LESSON5
-function ziplesson5(cb) {
+// ZIP LESSON6
+function ziplesson6(cb) {
   gulp.src("docs/lessons/base-site-togglenav/**/*")
     .pipe(zip("base-site-togglenav.zip"))
     .pipe(gulp.dest("docs/lessons/"));
   cb();
 }
 
-// ZIP LESSON6
-function ziplesson6(cb) {
+// ZIP LESSON7
+function ziplesson7(cb) {
   gulp.src("docs/lessons/base-site-subpages/**/*")
     .pipe(zip("base-site-subpages.zip"))
     .pipe(gulp.dest("docs/lessons/"));
@@ -333,7 +330,7 @@ function zipexample3(cb) {
 }
 
 // WATCH DOCS
-const doc_series = [html, css, js, imageMin, copyhtmlroot, copysassroot, copyjsroot, copyimagesroot, sassroot, sasslesson1, sasslesson1b, sasslesson2, sasslesson3, sasslesson4, sasslesson5, sasslesson6, ziplesson1, ziplesson1b, ziplesson2, ziplesson3, ziplesson4, ziplesson5, ziplesson6, zipvariation1, zipvariation2, zipexample1, zipexample2, zipexample3];
+const doc_series = [html, css, js, imageMin, copyhtmlroot, copysassroot, copyjsroot, copyimagesroot, sassroot, sasslesson1, sasslesson2, sasslesson3, sasslesson4, sasslesson5, sasslesson6, sasslesson7, ziplesson1, ziplesson2, ziplesson3, ziplesson4, ziplesson5, ziplesson6, ziplesson7, zipvariation1, zipvariation2, zipexample1, zipexample2, zipexample3];
 
 function watch_docs() {
   browserSync.init({
@@ -348,8 +345,11 @@ function watch_docs() {
   gulp.watch("docs/*.html", series(doc_series)).on("change", browserSync.reload);
 }
 
-
+// 'gulp docs' will build all assets but not run on a local server.
 exports.docs = series(doc_series, watch_docs);
+
+// 'gulp build' will build all assets but not run on a local server.
+exports.build = parallel(doc_series);
 
 //
 // END BUILD DOCS

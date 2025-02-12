@@ -158,23 +158,13 @@ em {
   font-style: italic;
 }
 
-/* #LINKS */
-a {
-  color: var(--color-links);
-}
-
-a:hover {
-  color: var(--color-links-darker);
-}
-
 /* TEXT CENTERING HELPER CLASS */
 .text-centered {
   text-align: center;
 }
 
 .text-centered p {
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
 }
 
 /* #MEDIA  */

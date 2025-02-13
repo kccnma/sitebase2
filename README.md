@@ -33,7 +33,12 @@ $ npm run dev
   - added a new globals step (1b)
   - added a starter set of variables via css custom properties
   - updated the flexbox grid system using gap and a css custom property for the grid gap
-
+- 02-12-25
+  - refactored all css (removed redundacies, fixed variable usage, updated margin left/right to inline)
 
 ## Known Issues
 - Multiple dependencies need to be updated (current dev version will fail on install)
+- Legacy SiteBase1 Accordion UI components are dated (need to be updated to details summary elements)
+
+## Road Map
+- Add SiteBase2 Logo as an Image/SVG to the Main/Docs Site Header

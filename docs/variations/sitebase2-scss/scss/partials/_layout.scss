@@ -1,4 +1,12 @@
 /* LAYOUT */
+
+/* SITE-WIDE CONTAINER WRAPPER CLASS */ 
+.container {
+  max-width: $breakpoint-medium - 50;
+  margin: 0 auto;
+  padding: 0 1em; 
+}
+
 /*
 #MEDIA QUERIES (Mobile First)
 	#DEFAULT+ (Mobile First - Default Settings in the CSS Above)
@@ -8,20 +16,6 @@
 	#EXTRALARGE+ (Desktop+) - min-width: 1250px  */
 
 /* SMALL+ (Mobile First Defaults) */
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
-.container {
-  max-width: $breakpoint-medium - 50;
-  margin: 0 auto;
-  padding: 0 1em; 
-}
 
 /* SET YOUR BODY TEXT TO BE RESPONSIVE 
   - Small screens: 14px;

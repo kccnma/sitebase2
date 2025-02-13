@@ -373,13 +373,14 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
             <h2 id="mediaqueries" class="section-header">Media Queries</h2>
             <p>Mobile-first media queries with four target screen sizes:</p>
             <ul>
-              <li>Small (Mobile): 0-767px+</li>
+              <li>Small (Mobile): 0-767px+ (default)</li>
               <li>Medium (Tablet): min-width: 768px+</li>
               <li>Large (Notebook): min-width: 1050px+</li>
-              <li>ExtraLarge (Desktop+): min-width: 1250px+</li>
+              <li>ExtraLarge (Desktop): min-width: 1250px+</li>
             </ul>
 
-            <pre><code>@media (min-width:  768px) { // FOR MEDIUM/TABLET SCREENS }
+            <pre><code>// MOBILE FIRST DEFAULT FOR SMALL/MOBILE SCREENS
+@media (min-width:  768px) { // FOR MEDIUM/TABLET SCREENS }
 @media (min-width: 1050px) { // FOR LARGE/NOTEBOOK SCREENS }
 @media (min-width: 1250px) { // FOR EXTRALARGE/DESKTOP+ SCREENS }
 </code></pre>

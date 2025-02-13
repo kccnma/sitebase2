@@ -18,16 +18,15 @@
         #COMPONENTS
             #BUTTONS
     #BASE LAYOUT
-        #SIMPLE RESET
-        #MEDIA QUERIES
         #CONTAINER
+        #MEDIA QUERIES
         #GRID SYSTEM
     #BASE SITE
         #SITE STRUCTURE
             #HEADER
                 # site-id (LOGO)
             #SITE NAVIGATION
-                #TOGGLE-NAV (Default for Small Screens)
+                # toggle-nav (Default for Small Screens)
             #FOOTER
             #SECTIONS
             #SUB PAGES
@@ -219,6 +218,13 @@ a.button:hover {
 }
 
 /* LAYOUT */
+/* SITE-WIDE CONTAINER WRAPPER CLASS */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
 /*
 #MEDIA QUERIES (Mobile First)
 	#DEFAULT+ (Mobile First - Default Settings in the CSS Above)
@@ -227,20 +233,6 @@ a.button:hover {
 	#LARGE+ (Desktop) - min-width: 1050px
 	#EXTRALARGE+ (Desktop+) - min-width: 1250px  */
 /* SMALL+ (Mobile First Defaults) */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 1em;
-}
-
 /* SET YOUR BODY TEXT TO BE RESPONSIVE 
   - Small screens: 14px;
   - Medium Screens: 16px;

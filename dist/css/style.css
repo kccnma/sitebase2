@@ -39,10 +39,10 @@
 /* SET GLOBAL VARIABLES */
 :root {
   /* BASE COLORS */
-  --color-body-background: rgb(255, 255, 255);
-  --color-text-body: rgba(0, 0, 0, 0.8);
-  --color-links: rgb(0, 51, 102);
-  --color-links-darker: rgb(0, 0, 51);
+  --color-body-background: rgb(255 255 255);
+  --color-text-body: rgb(0 0 0 / 0.8);
+  --color-links: rgb(0 51 102);
+  --color-links-darker: rgb(0 0 51);
   /* BASE TYPOGRAPHY */
   --font-body: system-ui, Helvetica, Arial, sans-serif;
   --font-headings: system-ui, Helvetica, Arial, sans-serif;

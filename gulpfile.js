@@ -339,7 +339,7 @@ function watch_docs() {
     }
   });
   gulp.watch("src/*.html", series(doc_series)).on("change", browserSync.reload);
-  gulp.watch("src/scss/**/*.scss", series(doc_series));
+  gulp.watch("src/scss/**/*.scss", series(doc_series)).on("change", browserSync.reload);
   gulp.watch("src/js/*.js", series(doc_series)).on("change", browserSync.reload);
   gulp.watch("src/**/*.+(png|jpg|jpeg|gif|svg)", series(doc_series)).on("change", browserSync.reload);
   gulp.watch("docs/*.html", series(doc_series)).on("change", browserSync.reload);

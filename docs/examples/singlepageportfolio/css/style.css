@@ -1022,12 +1022,15 @@ article p + h6 {
   .toggle-nav .site-id {
     position: absolute;
   }
+  .toggle-nav .site-navigation ul li a {
+    padding: 0.75em;
+  }
   .toggle-nav li a:hover {
     color: #fff;
     background: #036;
   }
   .toggle-nav .menu-button {
-    margin: 0.8em 0;
+    margin: 0.6em 0;
     display: inline-block;
     background-color: transparent;
     border: none;
@@ -1043,16 +1046,20 @@ article p + h6 {
   .toggle-nav .menu-button.navicon::after {
     color: #333;
     content: "☰";
-    font-size: 1.5em;
+    font-size: 2em;
     margin-top: -0.1em;
-    margin-left: 0.5em;
+    margin-bottom: 0.1em;
+    margin-left: 0;
     width: 1em;
     height: 1em;
-    line-height: 1em;
+    line-height: 1;
     display: inline-block;
   }
   .toggle-nav[data-navstate=open] .menu-button.navicon::after {
     content: "✕";
+    font-size: 1.6em;
+    margin-top: 0.2em;
+    margin-right: 0.1em;
   }
   .toggle-nav ul {
     max-height: 0;

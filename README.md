@@ -26,15 +26,19 @@ $ npm run dev
 ```
 
 ## Updates
-- 01-24-25
-  - initital migration of source code from SiteBase1
+- 10-02-25
+  - ran npm audit fix --force and addressed all dependency warnings and errors
+  - updated gulp and removed imagemin due to not able to fix it (simply piping/copying images from src to dist instead)
+  - increased the navicon size 
+- 02-12-25
+  - refactored all css (removed redundacies, fixed variable usage, updated margin left/right to inline)
 - 01-27-25
   - updated lessons 1b-6
   - added a new globals step (1b)
   - added a starter set of variables via css custom properties
   - updated the flexbox grid system using gap and a css custom property for the grid gap
-- 02-12-25
-  - refactored all css (removed redundacies, fixed variable usage, updated margin left/right to inline)
+- 01-24-25
+  - initital migration of source code from SiteBase1
 
 ## Known Issues
 - Multiple dependencies need to be updated (current dev version will fail on install)

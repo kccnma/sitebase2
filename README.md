@@ -41,8 +41,9 @@ $ npm run dev
   - initital migration of source code from SiteBase1
 
 ## Known Issues
-- Multiple dependencies need to be updated (current dev version will fail on install)
 - Legacy SiteBase1 Accordion UI components are dated (need to be updated to details summary elements)
+- There are multiple legacy sass variables that need to be converted to css custom properties
 
 ## Road Map
 - Add SiteBase2 Logo as an Image/SVG to the Main/Docs Site Header
+- Clean-up/refactor all sass variables > css custom properties

@@ -24,7 +24,7 @@
     #BASE SITE
         #SITE STRUCTURE
             #HEADER
-                # site-id (LOGO)
+                # site-logo (LOGO)
             #SITE NAVIGATION
                 # toggle-nav (Default for Small Screens)
             #FOOTER
@@ -38,13 +38,7 @@
 /* SET GLOBAL VARIABLES */
 :root {
   /* BASE COLORS */
-  --color-body-background: rgb(255 255 255);
-  --color-text-body: rgb(0 0 0 / 0.8);
-  --color-links: rgb(0 51 102);
-  --color-links-darker: rgb(0 0 51);
   /* BASE TYPOGRAPHY */
-  --font-body: system-ui, Helvetica, Arial, sans-serif;
-  --font-headings: system-ui, Helvetica, Arial, sans-serif;
 }
 
 /* GLOBAL RESETS */
@@ -62,25 +56,25 @@ body {
 /* GLOBAL COLORS */
 body {
   /* SET THE COLOR OF THE MAIN BODY BACKGROUND */
-  background-color: var(--color-body-background);
+  background-color: #fff;
   /* SET THE COLOR OF THE MAIN BODY TEXT */
-  color: var(--color-text-body);
+  color: #333;
 }
 
 a {
   /* SET THE COLOR OF ALL TEXT LINKS */
-  color: var(--color-links);
+  color: #036;
 }
 a:hover {
   /* SET THE COLOR OF ALL HOVER STATES ON TEXT LINKS */
-  color: var(--color-links-darker);
+  color: #003;
 }
 
 /* SET GLOBAL TYPOGRAPHY */
 /* # GLOBAL BODY FONT SETTINGS */
 body {
   /* SET THE DEFAUT FONT FAMILY FOR ALL MAIN BODY TEXT */
-  font-family: var(--font-body);
+  font-family: system-ui, Helvetica, Arial, sans-serif;
   /* SET THE DEFAULT FONT SIZE ALL MAIN BODY TEXT */
   font-size: 100%;
   /* 16px; */
@@ -96,7 +90,7 @@ h4,
 h5,
 h6 {
   /* SET THE DEFAUT FONT FAMILY FOR ALL HEADINGS */
-  font-family: var(--font-headings);
+  font-family: system-ui, Helvetica, Arial, sans-serif;
   /* SET THE DEFAUT MARGINS ALL HEADINGS */
   margin: 0.5em 0;
 }
@@ -238,8 +232,8 @@ pre code {
 .blocked a,
 .blocked .site-header a,
 .blocked .site-footer a,
-.blocked .site-id h1,
-.blocked .site-id h1 a,
+.blocked .site-logo h1,
+.blocked .site-logo h1 a,
 .blocked li,
 .blocked blockquote,
 .blocked a.button,
@@ -326,14 +320,13 @@ button {
 button,
 a.button {
   display: inline-block;
-  background-color: var(--color-links);
-  border: 1px solid var(--color-links);
+  background-color: #036;
+  border: 1px solid #036;
   color: #fff;
   padding: 0.75em 1em;
   border-radius: 0.32em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
-  border: none;
   cursor: pointer;
   line-height: 1;
   text-decoration: none;
@@ -342,15 +335,15 @@ a.button {
 button.alt,
 a.button.alt {
   background-color: transparent;
-  border: 1px solid var(--color-links);
-  color: var(--color-links);
+  border: 1px solid #036;
+  color: #036;
 }
 
 button:hover,
 a.button:hover {
-  background-color: var(--color-links-darker);
+  background-color: #003;
   color: #fff;
-  border-color: var(--color-links-darker);
+  border-color: #003;
   text-decoration: none;
 }
 
@@ -540,6 +533,7 @@ body {
 .demo .column {
   padding: 1em;
   background: #ddd;
+  color: #333;
   text-align: center;
 }
 .demo .column p {
@@ -581,22 +575,25 @@ body {
   color: white;
 }
 
-/* Site ID */
-.site-id {
+/* Site Logo */
+.site-logo {
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   gap: 0.5em;
 }
-.site-id a img,
-.site-id a svg {
+.site-logo a img,
+.site-logo a svg {
   display: block;
 }
-.site-id h1 {
+.site-logo h1 {
   font-size: 1.5em;
   font-weight: normal;
   font-style: normal;
@@ -604,7 +601,7 @@ body {
   color: #999;
   padding: 0.5em 0 0.4em 0;
 }
-.site-id h1 a {
+.site-logo h1 a {
   font-weight: bold;
   display: inline-block;
 }
@@ -656,8 +653,14 @@ section {
 }
 .hero h1,
 .hero h2 {
-  font-size: 3em;
+  font-size: 4em;
   line-height: 1.1em;
+  letter-spacing: -0.02em;
+}
+.hero h1,
+.hero h2,
+.hero p {
+  text-wrap: balance;
 }
 .hero.full-width {
   margin-top: 0;
@@ -680,6 +683,7 @@ section {
 /* Colored Sections */
 section.superlightgrey {
   background: #f9f9f9;
+  color: #333;
   padding: 5em 0 2em 0;
 }
 
@@ -754,6 +758,10 @@ article p + h6 {
   padding: 2em 0;
 }
 
+.post-title a {
+  text-decoration: none;
+}
+
 /* Sub Pages with Multiple Column Layout */
 @media (min-width: 768px) {
   .subpage-twocol {
@@ -796,7 +804,7 @@ article p + h6 {
 }
 
 .subpage-navigation {
-  font-family: var(--font-body);
+  font-family: system-ui, Helvetica, Arial, sans-serif;
   padding: 0;
 }
 .subpage-navigation ul {
@@ -946,7 +954,7 @@ article p + h6 {
 /* #SITE NAVIGATION  */
 /* Default Site-Navigation Menu (both header & footer) */
 .site-navigation {
-  font-family: var(--font-body);
+  font-family: system-ui, Helvetica, Arial, sans-serif;
 }
 .site-navigation .menu-button {
   display: none;
@@ -1052,7 +1060,7 @@ article p + h6 {
     /* MENU BUTTON */
     /* TOGGLE NAV UL */
   }
-  .toggle-nav .site-id {
+  .toggle-nav .site-logo {
     position: absolute;
   }
   .toggle-nav .site-navigation ul li a {
@@ -1114,47 +1122,8 @@ article p + h6 {
 /* Animated Toggle-Nav Menu */
 @media (max-width: 767px) {
   .toggle-nav.animated ul {
-    display: block;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    padding: 0;
-    border-width: 0;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-  }
-
-  .toggle-nav.animated[data-navstate=open] ul {
-    max-height: 138em;
-    opacity: 1;
-    padding: 0.5em 0;
-    border-width: 0px;
-    -webkit-transition: all 0.6s ease;
-    transition: all 0.6s ease;
-  }
-
-  .toggle-nav.animated li {
-    padding: 0;
-    opacity: 0;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-  }
-
-  .toggle-nav.animated[data-navstate=open] li {
-    padding: 0.25em;
-    opacity: 1;
-    -webkit-transition: all 0.6s ease 0.2s;
-    transition: all 0.6s ease 0.2s;
-  }
-
-  .toggle-nav.animated li a {
-    padding: 0;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-  }
-
-  .toggle-nav.animated[data-navstate=open] li a {
-    padding: 0.75em;
+    -webkit-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
   }
 }
 /* FORMS */

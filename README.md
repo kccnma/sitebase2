@@ -42,8 +42,8 @@ $ npm run dev
 
 ## Known Issues
 - Legacy SiteBase1 Accordion UI components are dated (need to be updated to details summary elements)
-- There are multiple legacy sass variables that need to be converted to css custom properties
+- Legacy SiteBase1 sass variables need to be converted to css custom properties
 
 ## Road Map
 - Add SiteBase2 Logo as an Image/SVG to the Main/Docs Site Header
-- Clean-up/refactor all sass variables > css custom properties
+- Convert all sass variables > css custom properties

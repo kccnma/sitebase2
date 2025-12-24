@@ -23,7 +23,7 @@
     #BASE SITE
         #SITE STRUCTURE
             #HEADER
-                # site-id (LOGO)
+                # site-logo (LOGO)
             #SITE NAVIGATION
                 # toggle-nav (Default for Small Screens)
             #FOOTER
@@ -37,13 +37,7 @@
 /* SET GLOBAL VARIABLES */
 :root {
   /* BASE COLORS */
-  --color-body-background: rgb(255 255 255);
-  --color-text-body: rgb(0 0 0 / 0.8);
-  --color-links: rgb(0 51 102);
-  --color-links-darker: rgb(0 0 51);
   /* BASE TYPOGRAPHY */
-  --font-body: system-ui, Helvetica, Arial, sans-serif;
-  --font-headings: system-ui, Helvetica, Arial, sans-serif;
 }
 
 /* GLOBAL RESETS */
@@ -60,16 +54,16 @@ body {
 /* GLOBAL COLORS */
 body {
   /* SET THE COLOR OF THE MAIN BODY BACKGROUND */
-  background-color: var(--color-body-background);
+  background-color: #fff;
   /* SET THE COLOR OF THE MAIN BODY TEXT */
-  color: var(--color-text-body);
+  color: #333;
 }
 
 a {
   /* SET THE COLOR OF ALL TEXT LINKS */
-  color: var(--color-links);
+  color: #036;
 }
 a:hover {
   /* SET THE COLOR OF ALL HOVER STATES ON TEXT LINKS */
-  color: var(--color-links-darker);
+  color: #003;
 }

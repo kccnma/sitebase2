@@ -4,7 +4,8 @@
 body {
 
   /* SET THE DEFAUT FONT FAMILY FOR ALL MAIN BODY TEXT */
-  font-family: var(--font-body);
+  // font-family: var(--font-body);
+  font-family: $body-font-family;
 
   /* SET THE DEFAULT FONT SIZE ALL MAIN BODY TEXT */
   font-size: 100%; /* 16px; */
@@ -23,7 +24,8 @@ h5,
 h6 {
 
   /* SET THE DEFAUT FONT FAMILY FOR ALL HEADINGS */
-  font-family: var(--font-headings);
+  // font-family: var(--font-headings);
+  font-family: $heading-font-family;
 
   /* SET THE DEFAUT MARGINS ALL HEADINGS */
   margin: 0.5em 0;

@@ -41,6 +41,9 @@ article {
 .post {
   padding: 2em 0;
 }
+.post-title a{
+  text-decoration: none;
+}
 
 /* Sub Pages with Multiple Column Layout */
 
@@ -87,7 +90,8 @@ article {
 }
 
 .subpage-navigation {
-  font-family: var(--font-body);
+  // font-family: var(--font-body);
+  font-family: $body-font-family;
   padding: 0;
   ul {
     margin: 0;

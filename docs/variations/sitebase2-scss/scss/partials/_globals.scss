@@ -6,15 +6,15 @@
 :root {  
 
     /* BASE COLORS */
-    --color-body-background: rgb(255 255 255);
-    --color-text-body: rgb(0 0 0 / 0.8);
+    // --color-body-background: rgb(255 255 255);
+    // --color-text-body: rgb(0 0 0 / 0.8);
 
-    --color-links: rgb(0 51 102);
-    --color-links-darker: rgb(0 0 51);
+    // --color-links: rgb(0 51 102);
+    // --color-links-darker: rgb(0 0 51);
 
     /* BASE TYPOGRAPHY */
-    --font-body: system-ui, Helvetica, Arial, sans-serif;
-    --font-headings: system-ui, Helvetica, Arial, sans-serif;
+    // --font-body: system-ui, Helvetica, Arial, sans-serif;
+    // --font-headings: system-ui, Helvetica, Arial, sans-serif;
 
 }
 
@@ -32,20 +32,24 @@ body { margin: 0; }
 body {
 
     /* SET THE COLOR OF THE MAIN BODY BACKGROUND */
-    background-color: var(--color-body-background);
+    // background-color: var(--color-body-background);
+    background-color: $background-color-body;
 
     /* SET THE COLOR OF THE MAIN BODY TEXT */
-    color: var(--color-text-body);
+    // color: var(--color-text-body);
+    color: $text-color;
 
 }
 
 a {
     /* SET THE COLOR OF ALL TEXT LINKS */
-    color: var(--color-links);
+    // color: var(--color-links);
+    color: $link-color;
 
     &:hover {
         /* SET THE COLOR OF ALL HOVER STATES ON TEXT LINKS */
-        color: var(--color-links-darker);
+        // color: var(--color-links-darker);
+        color: $link-color-dark;
     }
 
 }

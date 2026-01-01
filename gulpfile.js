@@ -102,10 +102,10 @@ function watch_files() {
   });
   const w1 = watch('index.html', html).on('change', browserSync.reload);
   watch('src/*.html', html).on('change', browserSync.reload);
-  watch('docs/*.html', html).on('change', browserSync.reload);
   watch('src/scss/**/*.scss', css);
   watch('src/js/*.js', js).on('change', browserSync.reload);
   watch('src/**/*.+(png|jpg|jpeg|gif|svg|webp|avif)', imageMinWatch).on('change', browserSync.reload);
+  watch('docs/*.html', html).on('change', browserSync.reload);
 
   return w1; // return a watcher (EventEmitter) so Gulp knows this task is async/long-running
 }
@@ -341,16 +341,16 @@ function watch_docs() {
       baseDir: './'
     }
   });
-  const w1 = watch('src/*.html', series(...doc_series)).on('change', browserSync.reload);
+  const w2 = watch('src/*.html', series(...doc_series)).on('change', browserSync.reload);
   watch('src/scss/**/*.scss', series(...doc_series)).on('change', browserSync.reload);
   watch('src/js/*.js', series(...doc_series)).on('change', browserSync.reload);
   watch('src/**/*.+(png|jpg|jpeg|gif|svg)', series(...doc_series)).on('change', browserSync.reload);
   watch('docs/*.html', series(...doc_series)).on('change', browserSync.reload);
 
-  return w1; // return a watcher so Gulp sees the task as active
+  return w2; // return a watcher so Gulp sees the task as active
 }
 
-// 'gulp docs' will build all assets but not run on a local server.
+// 'gulp docs' will build all docs assets and run on a local server.
 export const docs = series(...doc_series, watch_docs);
 
 // 'gulp build' will build all assets but not run on a local server.

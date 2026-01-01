@@ -58,11 +58,10 @@
             <ul class="nav">
               <li><a href="#folder">Folder Structure</a></li>
               <li>
-                <a href="#startertemplate">Starter Template</a>
+                <a href="#boilerplatetemplate">Boilerplate</a>
                 <ul>
                   <li><a href="#html">HTML</a></li>
                   <li><a href="#css">CSS</a></li>
-                  <li><a href="#scss">SCSS</a></li>
                   <li><a href="#js">JS</a></li>
                 </ul>
               </li>
@@ -78,7 +77,6 @@
                   <li><a href="#bodytext">Body Text</a></li>
                   <li><a href="#lists">Lists</a></li>
                   <li><a href="#links">Links</a></li>
-                  <li><a href="#blockquotes">Blockquotes</a></li>
                 </ul>
               </li>
               <li>
@@ -132,18 +130,18 @@
               <li>As a learning project - to be manually recoded from scratch by following a set of step-by-step lessons designed specifically for beginner level web designers and frontend web developers looking to learn how to manually code bespoke static sites from scratch.</li>
             </ol>
 
-            <h3 id="download">Download SiteBase2</h3>
-            <p>The easiest way to jump right in and get started is to download SiteBase2, rename it, then customize it. It's that simple.</p>
+            <h3 id="download">Download SiteBase2 .zip File</h3>
+            <p>The easiest way to jump right in and get started is to download SiteBase2 as a blank starter set of files and folders that are already set up to be customized to begin manually coding any bespoke static website project. No build tool required. Just download the project folder, rename it, and customize it. It's that simple.</p>
             <p><a class="button" href="variations/sitebase2-static.zip">Download SiteBase2 [.zip]</a></p>
 
-            <h3 id="lessons">Step-by-Step Lessons</h3>
-            <p>The harder (but more meaningful!) way to begin using SiteBase2, is to manually recode it from scratch by following along with step-by-step lessons with detailed instructions to create your own site base. SiteBase2 was designed for students and is 100% open source and free to use for any and all projects inclusing personal and commercial websites.</p>
+            <h3 id="lessons">Follow the Step-by-Step Lessons</h3>
+            <p>The harder (but more meaningful) way to begin using SiteBase2, is to manually recode it from scratch by following along with step-by-step lessons with detailed instructions to create your own site base. SiteBase2 was designed for UX/UI designers and beginner-level frontend web development students. It is 100% open source and free to use for any and all projects inclusing personal and commercial websites.</p>
             <p><a class="button alt" href="lessons.html">Go to the SiteBase2 Lessons</a></p>
 
           </section>
 
-          <section id="getsetup">
-            <h2 class="section-header">Folder Structure</h2>
+          <section>
+            <h2 id="folder" class="section-header">Folder Structure</h2>
             <pre><code>
 base/
 ├── <a href="https://github.com/kccnma/sitebase2/blob/master/docs/demos/base-boilerplate-starter/index.html">index.html</a>
@@ -154,7 +152,7 @@ base/
     
 </code></pre>
 
-            <h2 class="section-header">Starter Template</h2>
+            <h2 id="boilerplatetemplate" class="section-header">Boilerplate Template</h2>
 
             <h3 id="html">HTML</h3>
             <p>Mobile ready with links to external CSS and JS files.</p>
@@ -164,7 +162,8 @@ base/
             <p>CSS Table of Contents:</p>
             <script src="https://gist.github.com/kccnma/3cce7281cfe835b687fedfe80c099c12.js"></script>
 
-            <h3 id="scss">SCSS (Optional)</h3>
+            <!-- COMMENT OUT SASS FOR NOW -->
+            <!-- <h3 id="scss">SCSS (Optional)</h3>
             <p>SiteBase2 is also able to optionally support SASS/SCSS for those that prefer to build static websites using a build tool/step to compile modular partials into a singular style.css file.</p>
             <p>SCSS File Structure:</p>
             <pre><code>
@@ -187,7 +186,7 @@ base/
         ├── <a href="https://github.com/kccnma/sitebase2/blob/master/src/scss/partials/_forms.scss">_forms.scss</a>
         ├── <a href="https://github.com/kccnma/sitebase2/blob/master/src/scss/partials/_animation-pageload-fadein.scss">_animation-pageload-fadein.scss</a>
     
-</code></pre>
+</code></pre> -->
 
             <h3 id="js">JS</h3>
             <p>Vanilla Javascript inside of one script.js file.</p>
@@ -250,7 +249,7 @@ document.addEventListener('DOMContentLoaded', function() {
 Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
 </code></pre>
 
-            <h4 id="lists">Unordered List:</h4>
+            <h4 id="lists">Unordered Lists:</h4>
             <ul>
               <li>List Item</li>
               <li>List Item</li>
@@ -278,7 +277,7 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
 &#60;/ul&#62;
 </code></pre>
 
-            <h4>Ordered List:</h4>
+            <h4>Ordered Lists:</h4>
             <ol>
               <li>List Item</li>
               <li>List Item</li>
@@ -312,7 +311,8 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
             <pre><code>&#60;a href="#"&#62;link&#60;/a&#62;
 </code></pre>
 
-            <h4 id="blockquotes">Blockquotes:</h4>
+            <!-- COMMENT OUT BLOCKQUOTES FOR NOW -->
+            <!-- <h4 id="blockquotes">Blockquotes:</h4>
             <blockquote>
               <p>
                 This is a blockquote. Donec sed rhoncus massa. Suspendisse
@@ -329,7 +329,7 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
     suscipit nec, ornare et mauris. Proin mattis.&#60;/p&#62;
     &#60;cite&#62;Citation Source&#60;/cite&#62;
 &#60;/blockquote&#62;
-</code></pre>
+</code></pre> -->
 
             <h4 id="helpers">Helpers:</h4>
             <p class="text-centered">This is center-aligned text</p>
@@ -479,9 +479,11 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
             </h3>
 
             <p>
-              The base site structure consists of three main parts of a web
-              page: the header, main, and footer.
+              The base site structure consists of three main parts in the body section of the web
+              page: the header, main, and footer. Many websites are structured this way, with each stacked one on top another vertically and rendering via normal flow (top to bottom) in the browser.
             </p>
+
+            <img src="img/sitestructure-header-main-footer.png" alt="Visual of Site Structure: Header, Main Content Area, Footer" width="1600" height="1200">
 
             <pre><code>&#60;body&#62;
 
@@ -497,7 +499,7 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
 &#60;/body&#62;
 </code></pre>
 
-            <h3 id="pagesections">Page Sections</h3>
+            <h3 id="pagesections">Main Sections</h3>
 
             <p>
               The main content area of all pages can be divided into multiple
@@ -506,6 +508,8 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
               to the full-width of the browser). This base also includes default
               styling for a "hero" section.
             </p>
+
+            <img src="img/sitestructure-main-sections.png" alt="Visual of Main Sections" width="1600" height="1200">
 
             <pre><code>&#60;main class="site-main"&#62;
 

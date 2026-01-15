@@ -25,7 +25,8 @@
 
 /* MOBILE FIRST (DEFAULT) */
 body {
-  font-size: 87.5%; /* 14px; */ 
+  /* Set the default font size for small screens to 87.5% = 14px; */ 
+  font-size: 87.5%; 
 }
 
 /* #MEDIUM+ MEDIA QUERY */
@@ -37,7 +38,8 @@ body {
 @media (min-width: $breakpoint-medium) {
   /* LARGE BODY TYPE */
   body {
-    font-size: 100%; /* 16px; */
+    /* Set the default font size for medium sized screens to 100% = 16px; */
+    font-size: 100%; 
   }
 }
 
@@ -45,7 +47,8 @@ body {
 @media (min-width: $breakpoint-large) {
   /* EXTRA-LARGE BODY TYPE */
   body {
-    font-size: 112.5%; /* 18px; */
+    /* Set the default font size for large screens to 112.5% = 18px; */
+    font-size: 112.5%; 
   }
 
   /* FIXED WIDTH */
@@ -56,6 +59,7 @@ body {
 
 /* SEMANTIC GRID USING CSS FLEX BOX */
 .row {
+  /* SET THE GAP BETWEEN COLUMNS */ 
   --gridgap: 4%;  
 }
 
@@ -69,6 +73,7 @@ body {
     gap: var(--gridgap);
   }
 
+  .row > *,
   .row > .one-whole {
     width: 100%;
   }
@@ -104,11 +109,10 @@ body {
 }
 
 /* FOR DEMO PURPOSES ONLY */
-
 .demo .column {
   padding: 1em;
-  background: #ddd;
-  color: #333;
+  background: rgb(204 204 204 / .7);
+  color: rgb(51 51 51 / .7);
   text-align: center;
   p {
     margin: 0;

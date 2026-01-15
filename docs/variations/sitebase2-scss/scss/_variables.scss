@@ -4,18 +4,22 @@ $heading-font-family: system-ui, Helvetica, Arial, sans-serif;
 $navigation-font-family: system-ui, Helvetica, Arial, sans-serif;
 
 // Colors (default theme)
-$text-color: #333;
-$text-color-light: #999;
-$link-color: #036;
-$link-color-dark: #003;
-$accent-color: #000;
-$background-color-body: #fff;
-$background-color-header: #fff;
-$background-color-footer: #fff;
-$background-color-hero: #ddd;
+$text-color: rgb(0 0 0 / .8);
+$text-color-light: rgb(0 0 0 / .6);
+$text-color-dark: rgb(0, 0, 0);
+
+$link-color: rgb(0, 51, 102);
+$link-color-dark: rgb(0, 0, 51);
+$link-color-light: rgb(221, 255, 255);
+
+$accent-color: #888;
+$background-color-body: rgb(255, 255, 255);
+$background-color-header: transparent;
+$background-color-footer: transparent;
+$background-color-hero: rgb(221, 221, 221);
 
 // Borders
-$border-color: #ccc;
+$border-color: rgb(136 136 136 / .5);
 $border-width: 0px;
 
 // Breakpoints
@@ -25,13 +29,15 @@ $breakpoint-large: 1250px;
 
 // Themes
 
-$theme: "default";
+$theme: "defaault";
 @if ($theme == "lightgrey") {
   // Light Grey
   $text-color: #333;
   $text-color-light: #999;
+  $text-color-dark: rgb(0, 0, 0);
   $link-color: #39c;
   $link-color-dark: #069;
+  $link-color-light: rgb(191, 232, 252);
   $accent-color: #000;
   $background-color-body: #fff;
   $background-color-header: #e3e3e3;
@@ -43,8 +49,10 @@ $theme: "default";
   // Dark Grey
   $text-color: #ccc;
   $text-color-light: #999;
-  $link-color: #39c;
-  $link-color-dark: #6cf;
+  $text-color-dark: rgb(255, 255, 255);
+  $link-color: rgb(130, 205, 243);
+  $link-color-dark: rgb(212, 241, 255);
+  $link-color-light: rgb(0, 53, 79);
   $accent-color: #444;
   $background-color-body: #000;
   $background-color-header: #000;

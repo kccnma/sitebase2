@@ -34,10 +34,17 @@
 /* ----------------------------- */
 /* ----- GLOBAL STYLING -------- */
 /* ----------------------------- */
-/* SET GLOBAL VARIABLES */
+/* ----- SET GLOBAL VARIABLES ----- */
 :root {
   /* BASE COLORS */
+  --color-body-background: white;
+  --color-text-body: rgba(0, 0, 0, 0.8);
+  --color-text-headings: black;
+  --color-links: #003366;
+  --color-links-darker: #000033;
   /* BASE TYPOGRAPHY */
+  --font-body: system-ui, Helvetica, Arial, sans-serif;
+  --font-headings: system-ui, Helvetica, Arial, sans-serif;
 }
 
 /* GLOBAL RESETS */
@@ -54,16 +61,16 @@ body {
 /* GLOBAL COLORS */
 body {
   /* SET THE COLOR OF THE MAIN BODY BACKGROUND */
-  background-color: #fff;
+  background-color: var(--color-body-background);
   /* SET THE COLOR OF THE MAIN BODY TEXT */
-  color: #333;
+  color: var(--color-text-body);
 }
 
 a {
   /* SET THE COLOR OF ALL TEXT LINKS */
-  color: #036;
+  color: var(--color-links);
 }
 a:hover {
   /* SET THE COLOR OF ALL HOVER STATES ON TEXT LINKS */
-  color: #003;
+  color: var(--color-links-darker);
 }

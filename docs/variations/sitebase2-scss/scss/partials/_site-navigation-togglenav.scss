@@ -19,10 +19,11 @@
       background: $link-color;
     }
 
-    /* MENU BUTTON */
+    
     .menu-button {
-      margin: .6em 0;
+      /* Display the Menu Button if inside of a parent with a toggle-nav class */
       display: inline-block;
+      margin: .6em 0;
       background-color: transparent;
       border: none;
       padding: 0;
@@ -59,7 +60,7 @@
       }
     }
 
-    /* TOGGLE NAV UL */
+    
     ul {
       max-height: 0;
       overflow: hidden;

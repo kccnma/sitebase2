@@ -26,6 +26,8 @@ $ npm run dev
 ```
 
 ## Updates
+- 1-14-26
+  - implemented a limited set of css custom properties (variables)
 - 10-02-25
   - ran npm audit fix --force and addressed all dependency warnings and errors
   - updated gulp and removed imagemin due to not able to fix it (simply piping/copying images from src to dist instead)
@@ -42,8 +44,7 @@ $ npm run dev
 
 ## Known Issues
 - Legacy SiteBase1 Accordion UI components are dated (need to be updated to details summary elements)
-- Legacy SiteBase1 sass variables need to be converted to css custom properties
 
 ## Road Map
 - Add SiteBase2 Logo as an Image/SVG to the Main/Docs Site Header
-- Convert all sass variables > css custom properties
+- Convert more sass variables > css custom properties (eg sizing units, border styles, etc)

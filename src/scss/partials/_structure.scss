@@ -1,12 +1,12 @@
 /* Header & Footer */
-body {
-  background: $background-color-footer;
-}
+// body {
+//   background: $background-color-footer;
+// }
 
 /* Site Header */
 .site-header {
   background: $background-color-header;
-  border-bottom: $border-width solid $border-color;
+  // border-bottom: $border-width solid $border-color;
   padding: 0.5em 1em;
   @media (min-width: $breakpoint-small) {
     display: flex;
@@ -15,12 +15,12 @@ body {
   }
 
   a {
-    color: $text-color;
+    color: var(--color-text-body);
     text-decoration: none;
   }
 
   a:hover {
-    color: $link-color-dark;
+    color: var(--color-links-darker);
   }
 
   a.button {
@@ -48,7 +48,7 @@ body {
     font-weight: normal;
     font-style: normal;
     margin: 0;
-    color: $text-color-light;
+    color: var(--color-text-body);
     padding: 0.5em 0 0.4em 0;
 
     a {
@@ -62,7 +62,8 @@ body {
 /* Site Footer */
 .site-footer {
   background: $background-color-footer;
-  border-top: $border-width solid $border-color;
+  // border-top: $border-width solid $border-color;
+  padding-block: 2em;
 
   a {
     color: $text-color;
@@ -88,7 +89,8 @@ body {
 
 /* Main Site Section (Main Content Area) */
 .site-main {
-  background: $background-color-body;
+  // background: $background-color-body;
+  // background-color: var(--color-body-background);
   //padding-bottom: 1.5em;
 }
 

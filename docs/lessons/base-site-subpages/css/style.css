@@ -863,8 +863,8 @@ form input[type=button],
 form input[type=submit],
 form input[type=reset] {
   width: auto;
-  background-color: #003366;
-  border: 1px solid #003366;
+  background-color: var(--color-links);
+  border: 1px solid var(--color-links);
   color: #fff;
   padding: 0.75em 1em;
   -webkit-border-radius: 0.32em;
@@ -876,6 +876,6 @@ form input[type=reset] {
 form input[type=button]:hover,
 form input[type=submit]:hover,
 form input[type=reset]:hover {
-  background-color: #000033;
-  border-color: #000033;
+  background-color: var(--color-links-darker);
+  border-color: var(--color-links-darker);
 }

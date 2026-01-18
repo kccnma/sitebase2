@@ -9,7 +9,7 @@ Latest development version of SiteBase (Version #2), an ongoing, work-in-progres
 - [SiteBase2 Step-by-Step Lessons](https://kccnma.github.io/sitebase2/docs/lessons.html "SiteBase Lessons (incomplete)")
 
 ## Documentation
-- [SiteBase2 Docs](https://kccnma.github.io/sitebase2/docs/documentation.html "SiteBase Docs (incomplete)")
+- [SiteBase2 Docs](https://kccnma.github.io/sitebase2/docs/index.html "SiteBase Docs (incomplete)")
 
 ## Demos
 - [SiteBase2 Demo Site](https://kccnma.github.io/sitebase2/docs/variations/sitebase2-static/ "SiteBase Website")

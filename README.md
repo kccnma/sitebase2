@@ -46,5 +46,6 @@ $ npm run dev
 - Legacy SiteBase1 Accordion UI components are dated (need to be updated to details summary elements)
 
 ## Road Map
+- Add SiteBase2 Video Lessons
 - Add SiteBase2 Logo as an Image/SVG to the Main/Docs Site Header
 - Convert more sass variables > css custom properties (eg sizing units, border styles, etc)

@@ -40,8 +40,8 @@ form input[type=reset] {
 	margin-bottom: .5em;
     
     &:hover {
-  		background-color: var(--color-links-darker);
-  		border-color: var(--color-links-darker);
+  		background-color: var(--color-links-hover);
+  		border-color: var(--color-links-hover);
     }
     
 }

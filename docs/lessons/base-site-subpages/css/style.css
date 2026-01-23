@@ -42,7 +42,7 @@
   --color-text-body: rgba(0, 0, 0, 0.8);
   --color-text-headings: black;
   --color-links: #003366;
-  --color-links-darker: #000033;
+  --color-links-hover: #000033;
   /* BASE TYPOGRAPHY */
   --font-body: system-ui, Helvetica, Arial, sans-serif;
   --font-headings: system-ui, Helvetica, Arial, sans-serif;
@@ -59,6 +59,11 @@ body {
   margin: 0;
 }
 
+/* ENABLE NATIVE SMOOTH SCROLLING */
+html {
+  scroll-behavior: smooth;
+}
+
 /* GLOBAL COLORS */
 body {
   /* SET THE COLOR OF THE MAIN BODY BACKGROUND */
@@ -67,13 +72,18 @@ body {
   color: var(--color-text-body);
 }
 
+h1, h2, h3, h4, h5, h6 {
+  /* SET THE COLOR OF ALL HEADINGS */
+  color: var(--color-text-headings);
+}
+
 a {
   /* SET THE COLOR OF ALL TEXT LINKS */
   color: var(--color-links);
 }
 a:hover {
   /* SET THE COLOR OF ALL HOVER STATES ON TEXT LINKS */
-  color: var(--color-links-darker);
+  color: var(--color-links-hover);
 }
 
 /* ----- SET GLOBAL TYPOGRAPHY ----- */
@@ -89,18 +99,19 @@ body {
 }
 
 /* # GLOBAL HEADING SETTINGS */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   /* SET THE DEFAUT FONT FAMILY FOR ALL HEADINGS */
   font-family: var(--font-headings);
   /* SET THE COLOR OF ALL HEADINGS */
   color: var(--color-text-headings);
   /* SET THE DEFAUT MARGINS ALL HEADINGS */
-  margin: 0.5em 0;
+  margin: 1em 0 0.5em 0;
+  /* BALANCE ALL MULTI-LINE HEADINGS */
+  text-wrap: balance;
+  /* REDUCE TOP MARGIN IF FIRST CHILD */
+}
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+  margin-top: 0.5em;
 }
 
 /* SET THE DEFAULT TYPOGRAPHIC SCALE FOR ALL HEADINGS 
@@ -214,9 +225,9 @@ a.button.alt {
 
 button:hover,
 a.button:hover {
-  background-color: var(--color-links-darker);
+  background-color: var(--color-links-hover);
   color: #fff;
-  border-color: var(--color-links-darker);
+  border-color: var(--color-links-hover);
   text-decoration: none;
 }
 
@@ -360,7 +371,7 @@ body {
   text-decoration: none;
 }
 .site-header a:hover {
-  color: var(--color-links-darker);
+  color: var(--color-links-hover);
 }
 .site-header a.button {
   color: white;
@@ -418,15 +429,14 @@ body {
 /* Main Site Section (Main Content Area) */
 /* Main Sections */
 section {
-  padding: 1.5em 0;
+  padding: 3em 0;
 }
 
 /* Hero Sections */
 .hero {
   background: #dddddd;
   border-top: none;
-  padding: 4em 1em 3em 1em;
-  margin-bottom: 1.5em;
+  padding: 4em 1em 4em 1em;
 }
 .hero h1,
 .hero h2 {
@@ -470,13 +480,6 @@ article .date {
 article .date + p {
   margin-top: 2em;
 }
-article p + h2,
-article p + h3,
-article p + h4,
-article p + h5,
-article p + h6 {
-  margin-top: 1em;
-}
 
 /* Posts */
 .post {
@@ -492,6 +495,9 @@ article p + h6 {
   .subpage-twocol {
     display: flex;
   }
+}
+.subpage-sidebar {
+  padding-top: 2em;
 }
 @media (min-width: 768px) {
   .subpage-sidebar {
@@ -512,6 +518,9 @@ article p + h6 {
   color: rgba(0, 0, 0, 0.6);
 }
 
+.subpage-main {
+  padding-top: 2em;
+}
 @media (min-width: 768px) {
   .subpage-main {
     width: 70%;
@@ -584,7 +593,7 @@ article p + h6 {
 }
 
 /* OLD/LEGACY SUPPORT FOR PRE-FLEXBOX ORDERSWAP */
-/* OLD VERTICAL CENTERING MARKUP PRE-FLEXBOX */
+/* VERTICAL CENTERING VIA FLEXBOX */
 .vert-parent .column {
   display: flex;
   align-items: center;
@@ -876,6 +885,6 @@ form input[type=reset] {
 form input[type=button]:hover,
 form input[type=submit]:hover,
 form input[type=reset]:hover {
-  background-color: var(--color-links-darker);
-  border-color: var(--color-links-darker);
+  background-color: var(--color-links-hover);
+  border-color: var(--color-links-hover);
 }

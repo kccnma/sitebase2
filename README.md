@@ -26,6 +26,10 @@ $ npm run dev
 ```
 
 ## Updates
+- 1-23-26
+  - made minor code refactor improvements (eg cleaned up core typography, added native smooth scrolling)
+  - updated lessons with updated content and a new visual for the globals step
+  - updated docs with added content and multiple new visuals visuals
 - 1-14-26
   - implemented a limited set of css custom properties (variables)
 - 10-02-25

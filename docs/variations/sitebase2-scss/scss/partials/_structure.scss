@@ -20,7 +20,7 @@
   }
 
   a:hover {
-    color: var(--color-links-darker);
+    color: var(--color-links-hover);
   }
 
   a.button {
@@ -96,7 +96,7 @@
 
 /* Main Sections */
 section {
-  padding: 1.5em 0;
+  padding: 3em 0;
 }
 
 /* Hero Sections */
@@ -109,8 +109,8 @@ section {
   background: $background-color-hero;
   border-top: none;
   //border-bottom: 1px solid $border-color;
-  padding: 4em 1em 3em 1em; 
-  margin-bottom: 1.5em;
+  padding: 4em 1em 4em 1em; 
+  // margin-bottom: 1.5em;
 
   h1,
   h2 {

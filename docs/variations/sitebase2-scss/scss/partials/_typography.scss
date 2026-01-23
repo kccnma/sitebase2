@@ -17,21 +17,24 @@ body {
 }
 
 /* # GLOBAL HEADING SETTINGS */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
 
   /* SET THE DEFAUT FONT FAMILY FOR ALL HEADINGS */
   // font-family: $heading-font-family;
   font-family: var(--font-headings);
+
   /* SET THE COLOR OF ALL HEADINGS */
   color: var(--color-text-headings);
 
   /* SET THE DEFAUT MARGINS ALL HEADINGS */
-  margin: 0.5em 0;
+  margin: 1em 0 0.5em 0;
+
+  /* BALANCE ALL MULTI-LINE HEADINGS */
+  text-wrap: balance;
+
+  /* REDUCE TOP MARGIN IF FIRST CHILD */
+  &:first-child { margin-top: .5em; } 
+  
 }
 
 /* SET THE DEFAULT TYPOGRAPHIC SCALE FOR ALL HEADINGS 
@@ -101,6 +104,7 @@ em {
 .text-centered {
   text-align: center;
 }
+
 /* CENTER PARAGRAPHS INSIDE THE TEXT-CENTERED CLASS */
 .text-centered p {
   margin-inline: auto; 

@@ -28,13 +28,13 @@ article {
     margin-top: 2em;
   }
 
-  p + h2,
-  p + h3,
-  p + h4,
-  p + h5,
-  p + h6 {
-    margin-top: 1em;
-  } 
+  // p + h2,
+  // p + h3,
+  // p + h4,
+  // p + h5,
+  // p + h6 {
+  //   margin-top: 1em;
+  // } 
 }
 
 /* Posts */
@@ -54,6 +54,9 @@ article {
 }
 
 .subpage-sidebar {
+
+  padding-top: 2em;
+
   @media (min-width: $breakpoint-small) {
     width: 21%;
     padding-right: 2em;
@@ -74,6 +77,9 @@ article {
 }
 
 .subpage-main {
+
+  padding-top: 2em;
+
   @media (min-width: $breakpoint-small) {
     width: 70%;
     padding-left: 2em;
@@ -165,7 +171,7 @@ article {
 //   margin-right: 0;
 // }
 
-/* OLD VERTICAL CENTERING MARKUP PRE-FLEXBOX */
+/* VERTICAL CENTERING VIA FLEXBOX */
 .vert-parent .column {
   display: flex;
   //justify-content: center;

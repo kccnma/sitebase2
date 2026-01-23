@@ -41,7 +41,7 @@
   --color-text-body: rgba(0, 0, 0, 0.8);
   --color-text-headings: black;
   --color-links: #003366;
-  --color-links-darker: #000033;
+  --color-links-hover: #000033;
   /* BASE TYPOGRAPHY */
   --font-body: system-ui, Helvetica, Arial, sans-serif;
   --font-headings: system-ui, Helvetica, Arial, sans-serif;
@@ -58,6 +58,11 @@ body {
   margin: 0;
 }
 
+/* ENABLE NATIVE SMOOTH SCROLLING */
+html {
+  scroll-behavior: smooth;
+}
+
 /* GLOBAL COLORS */
 body {
   /* SET THE COLOR OF THE MAIN BODY BACKGROUND */
@@ -66,13 +71,18 @@ body {
   color: var(--color-text-body);
 }
 
+h1, h2, h3, h4, h5, h6 {
+  /* SET THE COLOR OF ALL HEADINGS */
+  color: var(--color-text-headings);
+}
+
 a {
   /* SET THE COLOR OF ALL TEXT LINKS */
   color: var(--color-links);
 }
 a:hover {
   /* SET THE COLOR OF ALL HOVER STATES ON TEXT LINKS */
-  color: var(--color-links-darker);
+  color: var(--color-links-hover);
 }
 
 /* ----- SET GLOBAL TYPOGRAPHY ----- */
@@ -88,18 +98,19 @@ body {
 }
 
 /* # GLOBAL HEADING SETTINGS */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   /* SET THE DEFAUT FONT FAMILY FOR ALL HEADINGS */
   font-family: var(--font-headings);
   /* SET THE COLOR OF ALL HEADINGS */
   color: var(--color-text-headings);
   /* SET THE DEFAUT MARGINS ALL HEADINGS */
-  margin: 0.5em 0;
+  margin: 1em 0 0.5em 0;
+  /* BALANCE ALL MULTI-LINE HEADINGS */
+  text-wrap: balance;
+  /* REDUCE TOP MARGIN IF FIRST CHILD */
+}
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+  margin-top: 0.5em;
 }
 
 /* SET THE DEFAULT TYPOGRAPHIC SCALE FOR ALL HEADINGS 
@@ -213,8 +224,8 @@ a.button.alt {
 
 button:hover,
 a.button:hover {
-  background-color: var(--color-links-darker);
+  background-color: var(--color-links-hover);
   color: #fff;
-  border-color: var(--color-links-darker);
+  border-color: var(--color-links-hover);
   text-decoration: none;
 }

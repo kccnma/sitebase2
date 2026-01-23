@@ -1,23 +1,49 @@
-/* #TYPOGRAPHY HELPERS */
-.centered p {
-  margin-inline: auto; 
-}
-
+/* TO MAKE ANY ELEMENT FULL WIDTH */
 .full-width {
   max-width: none;
   width: 100%;
 }
 
+/* TO CENTER ANY ELEMENT HORIZONTALLY */
 .horiz-center {
   margin-inline: auto; 
 }
 
-.hidden {
+/* TO HIDE ELEMENTS VISUALLY, BUT NOT FROM SCREEN READERS */ 
+.hide,
+.hidden,
+.screen-reader-only {
   position: absolute;
   top: -9999px;
   left: -9999px;
 }
 
+/* EYEBROWS */
+.eyebrow {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* SECTION TITLES */
+.section-title {
+  text-align: center;
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 50px;
+    border: 4px solid #ccc;
+    margin: 1em auto;
+  }
+}
+
+
+/* # SUBHEADERS */
 .subheader {
   color: $text-color-light;
   margin-top: 1em;
@@ -31,10 +57,10 @@ hr {
   border: 0;
   height: 1px;
   background: #ddd;
-  margin: 2em 0; 
+  margin: 3em 0; 
 }
 
-/* #CODE  */
+/* #CODE and #PRE STYLING */
 pre,
 code {
   font-family: "Courier New", Courier, "Lucida Sans Typewriter",
@@ -45,6 +71,10 @@ pre {
   margin: 1.5em 0 3em 0;
   line-height: 1.2em;
   font-size: 0.875em;
+}
+
+code {
+  padding-inline: 0.2em;
 }
 
 pre code {

@@ -101,10 +101,8 @@ body {
 h1, h2, h3, h4, h5, h6 {
   /* SET THE DEFAUT FONT FAMILY FOR ALL HEADINGS */
   font-family: var(--font-headings);
-  /* SET THE COLOR OF ALL HEADINGS */
-  color: var(--color-text-headings);
   /* SET THE DEFAUT MARGINS ALL HEADINGS */
-  margin: 1em 0 0.5em 0;
+  margin: 1em 0 0.25em 0;
   /* BALANCE ALL MULTI-LINE HEADINGS */
   text-wrap: balance;
   /* REDUCE TOP MARGIN IF FIRST CHILD */
@@ -161,22 +159,13 @@ p {
   text-wrap: pretty;
 }
 
-/* SET THE DEFAUT WEIGHT FOR BOLD/STRONG TEXT */
-strong {
-  font-weight: 700;
-}
-
-/* SET THE DEFAUT STYLING FOR ITALIC/EMPASIZED TEXT */
-em {
-  font-style: italic;
-}
-
 /* TEXT CENTERING HELPER CLASS */
 .text-centered {
   text-align: center;
 }
 
-/* CENTER PARAGRAPHS INSIDE THE TEXT-CENTERED CLASS */
+/* CENTER PARAGRAPHS WITH THE TEXT-CENTERED CLASS */
+p.text-centered,
 .text-centered p {
   margin-inline: auto;
 }
@@ -196,10 +185,6 @@ video {
 
 /* ----- #COMPONENTS -----  */
 /* #BUTTONS */
-button {
-  font-size: inherit;
-}
-
 button,
 a.button {
   display: inline-block;
@@ -211,8 +196,10 @@ a.button {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   cursor: pointer;
-  line-height: 1;
   text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: 1;
 }
 
 button.alt,

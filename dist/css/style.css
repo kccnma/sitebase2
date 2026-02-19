@@ -456,56 +456,29 @@ a.button:hover {
   margin-bottom: 2px;
 }
 
-/* LAYOUT */
-/* SITE-WIDE CONTAINER WRAPPER CLASS */
+/* SITE-WIDE CONTAINER */
 .container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 1em;
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 1em;
 }
 
-/*
-#MEDIA QUERIES (Mobile First)
-	#DEFAULT+ (Mobile First - Default Settings in the CSS Above)
-	#SMALL- (Mobile Only Overrides) - max-width: 767px
-	#MEDIUM+ (Tablet) - min-width: 768px
-	#LARGE+ (Desktop) - min-width: 1050px
-	#EXTRALARGE+ (Desktop+) - min-width: 1250px  */
-/* SMALL+ (Mobile First Defaults) */
-/* SET YOUR BODY TEXT TO BE RESPONSIVE 
-  - Small screens: 14px;
-  - Medium Screens: 16px;
-  - Large Screens: 18px;
-*/
-/* MOBILE FIRST (DEFAULT) */
+/* SCALING TYPE FROM SMALL (14px) TO LARGER (18px) ACROSS SCREEN SIZES */
+/* DEFAULT / SMALL & MEDIUM SCREENS = 14px */
 body {
-  /* Set the default font size for small screens to 87.5% = 14px; */
   font-size: 87.5%;
 }
 
-/* #MEDIUM+ MEDIA QUERY */
-@media (min-width: 768px) {
-  /* Inherits Small/Mobile Body Type from Above */
-}
-/* #LARGE+ MEDIA QUERY */
+/* MIDSIZE / LAPTOP SCREENS = 16px */
 @media (min-width: 1050px) {
-  /* LARGE BODY TYPE */
   body {
-    /* Set the default font size for medium sized screens to 100% = 16px; */
     font-size: 100%;
   }
 }
-/* #EXTRA-LARGE+ MEDIA QUERY */
+/* LARGE / DESKTOP SCREENS = 18px */
 @media (min-width: 1250px) {
-  /* EXTRA-LARGE BODY TYPE */
   body {
-    /* Set the default font size for large screens to 112.5% = 18px; */
     font-size: 112.5%;
-  }
-
-  /* FIXED WIDTH */
-  .container {
-    max-width: 1200px;
   }
 }
 /* SEMANTIC GRID USING CSS FLEX BOX */
@@ -526,55 +499,54 @@ body {
     gap: var(--gridgap);
   }
 
-  .row > *,
-.row > .one-whole {
-    width: 100%;
+  .row > .one-whole {
+    min-width: 100%;
   }
 
   .row > .one-half {
-    width: calc(50% - var(--gridgap) / 2);
-  }
-
-  .row > .one-third {
-    width: calc(33.3333% - var(--gridgap) / 1.5);
-  }
-
-  .row > .two-thirds {
-    width: calc(66.6666% - var(--gridgap) / 3);
+    min-width: calc(50% - var(--gridgap) / 2);
   }
 
   .row > .one-fourth {
-    width: calc(25% - var(--gridgap) / 1.5);
+    min-width: calc(25% - var(--gridgap) / 1.333);
+  }
+
+  .row > .one-third {
+    min-width: calc(33.3333% - var(--gridgap) / 1.5);
+  }
+
+  .row > .two-thirds {
+    min-width: calc(66.6666% - var(--gridgap) / 3);
   }
 
   .row > .three-fourths {
-    width: calc(75% - var(--gridgap) / 2.5);
+    min-width: calc(75% - var(--gridgap) / 4);
   }
 
-  .row > .push-one-half {
-    margin-left: calc(50% - var(--gridgap) / 2 + var(--gridgap));
+  /* ADD SUPPORT FOR SIMPLE ROWS WITH AUTO CHILDREN COLUMNS   */
+  .row > * {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
   }
 
-  .row > .push-one-third {
-    margin-left: calc(33.3333% - var(--gridgap) / 1.5 + var(--gridgap));
-  }
-
-  .row > .push-one-fourth {
-    margin-left: calc(25% - var(--gridgap) / 1.5 + var(--gridgap));
-  }
-
+  /* CENTERED HELPER CLASS  */
   .row > .centered {
     margin-inline: auto;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
   }
 }
 /* FOR DEMO PURPOSES ONLY */
-.demo .column {
+.demo .row > * {
   padding: 1em;
   background: rgba(204, 204, 204, 0.7);
   color: rgba(51, 51, 51, 0.7);
   text-align: center;
 }
-.demo .column p {
+
+.demo .row > * p {
   margin: 0;
   padding: 0 0.5em;
   max-width: none;

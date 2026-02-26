@@ -486,7 +486,7 @@ body {
 }
 
 .row > * {
-  margin-bottom: var(--gridgap);
+  margin-block: calc(var(--gridgap) * 0.5);
 }
 
 @media (min-width: 768px) {

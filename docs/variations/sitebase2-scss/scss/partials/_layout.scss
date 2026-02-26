@@ -27,7 +27,7 @@ body { font-size: 87.5%; }
 }
 
 .row > * {
-  margin-bottom: var(--gridgap);
+  margin-block: calc( var(--gridgap) * .5 );
 }
 
 @media (min-width: 768px) {

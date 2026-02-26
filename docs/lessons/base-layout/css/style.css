@@ -258,89 +258,48 @@ body {
     gap: var(--gridgap);
   }
 
-  .row > .one-whole {
-    min-width: 100%;
+  .row .one-whole {
+    width: 100%;
   }
 
-  .row > .one-half {
-    min-width: calc(50% - var(--gridgap) / 2);
+  .row .one-half {
+    width: calc(50% - var(--gridgap) * 0.5);
   }
 
-  .row > .one-fourth {
-    min-width: calc(25% - var(--gridgap) / 1.333);
+  .row .one-third {
+    width: calc(33.3333% - var(--gridgap) * 0.6666);
   }
 
-  .row > .one-third {
-    min-width: calc(33.3333% - var(--gridgap) / 1.5);
+  .row .two-thirds {
+    width: calc(66.6666% - var(--gridgap) * 0.3333);
   }
 
-  .row > .two-thirds {
-    min-width: calc(66.6666% - var(--gridgap) / 3);
+  .row .one-fourth {
+    width: calc(25% - var(--gridgap) * 0.75);
   }
 
-  .row > .three-fourths {
-    min-width: calc(75% - var(--gridgap) / 4);
+  .row .three-fourths {
+    width: calc(75% - var(--gridgap) * 0.25);
   }
 
-  /* ADD SUPPORT FOR SIMPLE ROWS WITH AUTO CHILDREN COLUMNS   */
-  .row > * {
-    flex-grow: 1;
+  /* HELPER CLASSES  */
+  /* SWAPPED COLUMNS */
+  .row.swapped {
+    flex-direction: row-reverse;
   }
 
-  /* CENTERED HELPER CLASS  */
-  .row > .centered {
+  /* CENTERED COLUMNS */
+  .row .centered {
     margin-inline: auto;
-    flex-grow: 0;
+  }
+
+  .row.centered {
+    justify-content: center;
   }
 }
-/* FOR DEMO PURPOSES ONLY */
-.demo .row > * {
+/* FOR GRID DEMO PURPOSES ONLY */
+.grid-demo .column {
+  background-color: #ddd;
   padding: 1em;
-  background: rgba(204, 204, 204, 0.7);
-  color: rgba(51, 51, 51, 0.7);
   text-align: center;
-}
-
-.demo .row > * p {
-  margin: 0;
-  padding: 0 0.5em;
-  max-width: none;
-}
-
-.demo {
-  padding: 2em 0;
-}
-
-.demo:after {
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 5px;
-  text-align: center;
-  width: 100%;
-  content: "Small (less than 768px)";
-  color: #fff;
-  background: #993333;
-}
-
-@media (min-width: 768px) {
-  body.demo:after {
-    content: "Medium (768px - 1049px)";
-    background: #bcb83d;
-  }
-}
-@media (min-width: 1050px) {
-  body.demo:after {
-    content: "Large (1050px - 1249px)";
-    background: #669933;
-  }
-}
-@media (min-width: 1250px) {
-  body.demo:after {
-    content: "Extra Large (1250px +)";
-    background: #0099cc;
-  }
-}
-.demo .column p:last-child {
-  margin-bottom: 0;
 }

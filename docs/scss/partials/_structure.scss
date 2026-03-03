@@ -1,4 +1,7 @@
-/* Header & Footer */
+/* ----------------------------- */
+/* ----- SITE STRUCTURE -------- */
+/* ----------------------------- */
+
 // body {
 //   background: $background-color-footer;
 // }
@@ -8,10 +11,11 @@
   background: $background-color-header;
   // border-bottom: $border-width solid $border-color;
   padding: 0.5em 1em;
-  @media (min-width: $breakpoint-small) {
+
+  @media (width >= $breakpoint-small) {
     display: flex;
     justify-content: space-between;
-    padding-top: 0.75em; 
+    padding-block-start: 0.75em; 
   }
 
   a {
@@ -107,9 +111,9 @@ section {
 // }
 .hero {
   background: $background-color-hero;
-  border-top: none;
+  // border-top: none;
   //border-bottom: 1px solid $border-color;
-  padding: 4em 1em 4em 1em; 
+  padding: 4em 1em; 
   // margin-bottom: 1.5em;
 
   h1,

@@ -86,6 +86,9 @@ a:hover {
   color: var(--color-links-hover);
 }
 
+/* ----------------------------- */
+/* ------ BASE CONTENT --------- */
+/* ----------------------------- */
 /* ----- SET GLOBAL TYPOGRAPHY ----- */
 /* # GLOBAL BODY FONT SETTINGS */
 body {
@@ -218,6 +221,9 @@ a.button:hover {
   text-decoration: none;
 }
 
+/* ----------------------------- */
+/* --------- LAYOUT ------------ */
+/* ----------------------------- */
 /* SITE-WIDE CONTAINER */
 .container {
   max-width: 1100px;
@@ -370,17 +376,19 @@ body {
   text-align: center;
 }
 
-/* Header & Footer */
+/* ----------------------------- */
+/* ----- SITE STRUCTURE -------- */
+/* ----------------------------- */
 /* Site Header */
 .site-header {
   background: transparent;
   padding: 0.5em 1em;
 }
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .site-header {
     display: flex;
     justify-content: space-between;
-    padding-top: 0.75em;
+    padding-block-start: 0.75em;
   }
 }
 .site-header a {
@@ -452,8 +460,7 @@ section {
 /* Hero Sections */
 .hero {
   background: #dddddd;
-  border-top: none;
-  padding: 4em 1em 4em 1em;
+  padding: 4em 1em;
 }
 .hero h1,
 .hero h2 {
@@ -660,12 +667,10 @@ article .date + p {
   text-align: center;
   font-size: 0.8em;
 }
-.thumblist-grid li a {
-  outline: none;
-}
 .thumblist-grid li a img {
   transition: border-color 0.3s ease;
   border-color: #fff;
+  display: block;
 }
 .thumblist-grid li a img:hover {
   border: 3px solid #39c;

@@ -51,7 +51,6 @@
 /* GLOBAL RESETS */
 /* CHANGE BOX-SIZING FOR ALL TO BORDER-BOX */
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -399,7 +398,6 @@ a.button:hover {
 .accordian .collapsible {
   opacity: 0;
   max-height: 0;
-  -webkit-transition: 0.2s ease-in-out all;
   transition: 0.2s ease-in-out all;
   padding: 0 1.5em;
   overflow: hidden;
@@ -503,8 +501,6 @@ body {
 /* ENABLE THE GRID LAYOUT FOR MEDIUM SCREENS AND UP */
 @media (width >= 768px) {
   .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     gap: var(--gridgap);
   }
@@ -537,9 +533,6 @@ body {
   /* GRID SPECIFIC HELPER CLASSES  */
   /* SWAPPED COLUMNS */
   .row.swapped {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
   }
 
@@ -549,8 +542,6 @@ body {
   }
 
   .row.centered {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
 }
@@ -630,8 +621,6 @@ body {
 /* TWO COLUMN GRID LAYOUT FOR SMALL SCREENS */
 @media (width < 768px) {
   .row:has(.two-col-mobile) {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     gap: var(--gridgap);
   }
@@ -650,16 +639,9 @@ body {
 }
 @media (width >= 768px) {
   .site-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-padding-before: 0.75em;
     padding-block-start: 0.75em;
   }
 }
@@ -677,14 +659,8 @@ body {
 /* Site Logo */
 .site-logo {
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   gap: 0.5em;
 }
@@ -723,11 +699,7 @@ body {
 }
 @media (min-width: 768px) {
   .site-footer .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     padding-bottom: 0.5em;
   }
@@ -856,8 +828,6 @@ article .date + p {
 /* Sub Pages with Multiple Column Layout */
 @media (min-width: 768px) {
   .subpage-twocol {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
@@ -954,20 +924,13 @@ article .date + p {
 
 /* Swap the display order of two columns */
 .orderswap {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
 }
 
 /* OLD/LEGACY SUPPORT FOR PRE-FLEXBOX ORDERSWAP */
 /* VERTICAL CENTERING VIA FLEXBOX */
 .vert-parent .column {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -1003,10 +966,7 @@ article .date + p {
 .thumblist-grid {
   margin: 2em 0;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 .thumblist-grid li {
@@ -1019,7 +979,6 @@ article .date + p {
   font-size: 0.8em;
 }
 .thumblist-grid li a img {
-  -webkit-transition: border-color 0.3s ease;
   transition: border-color 0.3s ease;
   border-color: #fff;
   display: block;
@@ -1063,16 +1022,9 @@ article .date + p {
 /* DISPLAY LIST ITEMS SIDE-BY-SIDE ON LARGE SCREENS*/
 @media (width >= 768px) {
   .site-navigation ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 0.5em;
   }
@@ -1110,7 +1062,6 @@ article .date + p {
     z-index: 100;
     left: -9000px;
     /* Give nested lists some padding and a background color */
-    -webkit-padding-after: 1em;
     padding-block-end: 1em;
     background-color: transparent;
     background-color: white;
@@ -1202,7 +1153,6 @@ article .date + p {
 /* Animated Toggle-Nav Menu */
 @media (width < 768px) {
   .toggle-nav.animated ul {
-    -webkit-transition: all 0.4s ease-out;
     transition: all 0.4s ease-out;
   }
 }
@@ -1253,14 +1203,6 @@ form input[type=reset]:hover {
 }
 
 /* make keyframes that tell the start state and the end state of our object */
-@-webkit-keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -1271,16 +1213,11 @@ form input[type=reset]:hover {
 }
 main {
   /* call our keyframe named fade-in, use animattion ease-in and repeat it only 1 time */
-  -webkit-animation-name: fade-in;
   animation-name: fade-in;
-  -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
-  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
 }
 

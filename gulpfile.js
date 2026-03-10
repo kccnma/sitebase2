@@ -60,7 +60,7 @@ function css() {
   return src('src/scss/**/*.scss')
     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(autoprefixer({
-      overrideBrowserslist: ['last 2 versions'],
+      // overrideBrowserslist: ['last 1 version', '> 1%', 'IE 10'],
       cascade: false
     }))
     .pipe(dest('dist/css'))

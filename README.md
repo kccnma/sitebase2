@@ -26,6 +26,9 @@ $ npm run dev
 ```
 
 ## Updates
+- 3-09-26
+  - Refactored Layout to have a simple semantic grid system by default, with bonus/optional extras as addons, such as a 12-column grid
+  - Refactored Site Structure to have a more simplified site navigation system by default, with bonus/optional extras as addons, such as nested lists as drop-down menus
 - 1-23-26
   - made minor code refactor improvements (eg cleaned up core typography, added native smooth scrolling)
   - updated lessons with updated content and a new visual for the globals step

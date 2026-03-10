@@ -462,13 +462,14 @@ a.button:hover {
 /* ----------------------------- */
 /* --------- LAYOUT ------------ */
 /* ----------------------------- */
-/* SITE-WIDE CONTAINER */
+/* ----- SITE-WIDE CONTAINER -----  */
 .container {
   max-width: 1100px;
   margin-inline: auto;
   padding-inline: 1em;
 }
 
+/* ----- RESPONSIVE TYPE -----  */
 /* SCALING TYPE FROM SMALL (14px) TO LARGER (18px) ACROSS SCREEN SIZES */
 /* DEFAULT / SMALL & MEDIUM SCREENS = 14px */
 body {
@@ -487,6 +488,7 @@ body {
     font-size: 112.5%;
   }
 }
+/* ----- GRID SYSTEM -----  */
 /* A SIMPLE SEMANTIC GRID USING CSS FLEX BOX */
 .row {
   /* SET THE GAP BETWEEN COLUMNS */
@@ -551,8 +553,17 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
   }
+}
+/* FOR GRID DEMO PURPOSES ONLY */
+.grid-demo .row > * {
+  background-color: #ddd;
+  padding: 1em;
+  text-align: center;
+}
 
-  /* BONUS COLUMNS CAN GO HERE (OPTIONAL & EXTENDABLE) */
+/* ------ GRID SYSTEM EXTRAS -------- */
+/* BONUS COLUMNS & GRID SYSTEM CAN GO HERE (OPTIONAL & EXTENDABLE) */
+@media (width >= 768px) {
   /* 12 COLUMN GRID SYSTEM */
   .row .col-1 {
     width: calc(8.3333% - var(--gridgap) * 0.909);
@@ -601,9 +612,22 @@ body {
   .row .col-12 {
     width: 100%;
   }
+
+  /* BONUS PUSH HELPERS FOR A SEMANTIC GRID */
+  .row .push-one-half {
+    margin-left: calc(50% + var(--gridgap) * 0.5);
+  }
+
+  .row .push-one-third {
+    margin-left: calc(33.3333% + var(--gridgap) * 0.3333);
+  }
+
+  .row .push-one-fourth {
+    margin-left: calc(25% + var(--gridgap) * 0.25);
+  }
 }
 /* BONUS LAYOUT HELPER CLASS FOR SMALL SCREENS */
-/* TWO COLUMN LAYOUT FOR SMALL SCREENS */
+/* TWO COLUMN GRID LAYOUT FOR SMALL SCREENS */
 @media (width < 768px) {
   .row:has(.two-col-mobile) {
     display: -webkit-box;
@@ -616,19 +640,12 @@ body {
     width: calc(50% - var(--gridgap) * 0.5);
   }
 }
-/* FOR GRID DEMO PURPOSES ONLY */
-.grid-demo .row > * {
-  background-color: #ddd;
-  padding: 1em;
-  text-align: center;
-}
-
 /* ----------------------------- */
 /* ----- SITE STRUCTURE -------- */
 /* ----------------------------- */
 /* Site Header */
 .site-header {
-  background: transparent;
+  background-color: transparent;
   padding: 0.5em 1em;
 }
 @media (width >= 768px) {
@@ -639,6 +656,9 @@ body {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-padding-before: 0.75em;
     padding-block-start: 0.75em;
   }
@@ -1026,115 +1046,94 @@ article .date + p {
   }
 }
 
-/* #SITE NAVIGATION  */
-/* Default Site-Navigation Menu (both header & footer) */
-.site-navigation .menu-button {
-  /* HIDE THE MENU BUTTON BY DEFAULT */
-  display: none;
-}
+/* ----- SITE NAVIGATION ------ */
+/* RESET THE STYLING FOR SITE NAV LISTS */
 .site-navigation ul {
   margin: 0;
-  padding: 0.5em 0;
+  padding: 0;
+  list-style: none;
   text-align: center;
 }
-.site-navigation ul li {
-  margin: 0;
-  padding: 0;
-  /* MAKE LIST ITEMS INLINE BLOCKS */
-  display: inline-block;
-  line-height: 1;
+
+/* HIDE THE MENU BUTTON BY DEFAULT (in case one exists) */
+.site-navigation .menu-button {
+  display: none;
 }
-.site-navigation ul li li {
-  white-space: nowrap;
-}
-.site-navigation ul li a {
-  display: block;
-  padding: 0.5em 0.75em 0.4em 0.75em;
-}
-.site-navigation ul li ul {
-  border-top: none;
-  margin: 0;
-  padding: 0;
-}
-@media (min-width: 768px) {
+
+/* DISPLAY LIST ITEMS SIDE-BY-SIDE ON LARGE SCREENS*/
+@media (width >= 768px) {
   .site-navigation ul {
-    border-top: none;
-    margin: 0;
-    padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 0.5em;
   }
-  .site-navigation ul li {
-    /* show nested lists on hover */
-    /* SELECTED STATE */
+}
+/* STYLE NAV LINKS DIFFERENTLY THAN DEFAULT INLINE LINKS*/
+.site-navigation a {
+  text-decoration: none;
+  color: var(--color-text-headings);
+  padding: 0.5em 1em;
+  display: block;
+}
+
+/* ------ SITE NAVIGATION EXTRAS ------ */
+/* ADD SUPPORT FOR NESTED LISTS AS DROP DOWN MENUS */
+.site-navigation li li {
+  white-space: nowrap;
+}
+
+@media (width >= 768px) {
+  .site-navigation li {
+    /* Make each list item a parent to any nested uls */
+    position: relative;
+    /* Show nested lists on hover and anchor them to the Left by Default*/
+    /* Anchor the Nested list to the right edge of the parent if it's the last child */
   }
-  .site-navigation ul li a {
-    margin: 0 0.5em;
-    padding: 0.85em 0.5em 0.75em 0.5em;
-  }
-  .site-navigation ul li a.button {
-    /* ADD SUPPORT FOR SITE HEADR NAV BUTTONS */
-    padding: 0.75em 1em;
-  }
-  .site-navigation ul li li {
-    /* stack nested lists */
+  .site-navigation li li {
+    /* Stack nested lists */
     display: block;
   }
-  .site-navigation ul li ul {
+  .site-navigation li ul {
     display: block;
     text-align: left;
-    /* hide nested lists by default by absolute positioning them off screen */
+    /* Hde nested lists by default via absolute positioning them off screen */
     position: absolute;
     z-index: 100;
     left: -9000px;
+    /* Give nested lists some padding and a background color */
+    -webkit-padding-after: 1em;
+    padding-block-end: 1em;
+    background-color: transparent;
     background-color: white;
+    /* Style nested list links slighlty differently than parent links */
   }
-  .site-navigation ul li ul a {
+  .site-navigation li ul a {
     color: rgba(0, 0, 0, 0.6);
   }
-  .site-navigation ul li:hover ul {
-    left: auto;
+  .site-navigation li:hover ul {
+    left: 0;
+  }
+  .site-navigation li:last-child:hover ul {
     right: 0;
-  }
-  .site-navigation ul li.selected a, .site-navigation ul li.current-menu-item a {
-    font-weight: bold;
-  }
-  .site-navigation ul li.selected li a, .site-navigation ul li.current-menu-item li a {
-    font-weight: normal;
+    left: auto;
   }
 }
-
-/* STYLING FOR SMALL SCREEN NAV ITEMS */
-@media (max-width: 767px) {
-  .site-navigation ul li,
-.site-navigation ul li ul li {
-    display: block;
-  }
-
-  /* MAKE NAV LINKS BIGGER FOR TOUCHSCREENS */
-  .site-navigation ul li a {
-    padding-block: 0.75em;
-  }
-
-  .site-navigation ul li a:hover {
-    color: white;
-    background-color: #000033;
-  }
-}
-/* Default Site-Navigation (footer only) */
-.site-footer .site-navigation ul {
-  border-top: none;
-  margin: 0;
-}
-
 /* TOGGLE NAV */
-@media (max-width: 767px) {
+@media (width < 768px) {
   .toggle-nav {
+    /* Align the inline-block menu button to the right on small screens */
     text-align: right;
+    /* POSITION THE LOGO ABSOLUTELY TO THE LEFT OF THE NAV 
+       TO PREVENT IT FROM BEING PUSHED DOWN BY THE MENU BUTTON 
+       ON SMALL SCREENS */
+    /* INCREASE PADDING OF NAV LINKS ON SMALL SCREENS */
+    /* STYLE THE HOVER/TOUCH STATE OF NAV LINKS ON SMALL SCREENS */
   }
   .toggle-nav .site-logo {
     position: absolute;
@@ -1154,18 +1153,19 @@ article .date + p {
     border: none;
     padding: 0;
     cursor: pointer;
+    color: var(--color-text-headings);
   }
   .toggle-nav .menu-button::-moz-selection {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: transparent;
   }
   .toggle-nav .menu-button::selection {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: transparent;
   }
   .toggle-nav .menu-button.navicon {
-    color: rgba(255, 255, 255, 0);
+    color: transparent;
   }
   .toggle-nav .menu-button.navicon::after {
-    color: #333;
+    color: var(--color-text-body);
     content: "☰";
     font-size: 2em;
     margin-top: -0.1em;
@@ -1197,7 +1197,7 @@ article .date + p {
 }
 
 /* Animated Toggle-Nav Menu */
-@media (max-width: 767px) {
+@media (width < 768px) {
   .toggle-nav.animated ul {
     -webkit-transition: all 0.4s ease-out;
     transition: all 0.4s ease-out;

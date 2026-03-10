@@ -223,13 +223,14 @@ a.button:hover {
 /* ----------------------------- */
 /* --------- LAYOUT ------------ */
 /* ----------------------------- */
-/* SITE-WIDE CONTAINER */
+/* ----- SITE-WIDE CONTAINER -----  */
 .container {
   max-width: 1100px;
   margin-inline: auto;
   padding-inline: 1em;
 }
 
+/* ----- RESPONSIVE TYPE -----  */
 /* SCALING TYPE FROM SMALL (14px) TO LARGER (18px) ACROSS SCREEN SIZES */
 /* DEFAULT / SMALL & MEDIUM SCREENS = 14px */
 body {
@@ -248,6 +249,7 @@ body {
     font-size: 112.5%;
   }
 }
+/* ----- GRID SYSTEM -----  */
 /* A SIMPLE SEMANTIC GRID USING CSS FLEX BOX */
 .row {
   /* SET THE GAP BETWEEN COLUMNS */
@@ -305,8 +307,17 @@ body {
   .row.centered {
     justify-content: center;
   }
+}
+/* FOR GRID DEMO PURPOSES ONLY */
+.grid-demo .row > * {
+  background-color: #ddd;
+  padding: 1em;
+  text-align: center;
+}
 
-  /* BONUS COLUMNS CAN GO HERE (OPTIONAL & EXTENDABLE) */
+/* ------ GRID SYSTEM EXTRAS -------- */
+/* BONUS COLUMNS & GRID SYSTEM CAN GO HERE (OPTIONAL & EXTENDABLE) */
+@media (width >= 768px) {
   /* 12 COLUMN GRID SYSTEM */
   .row .col-1 {
     width: calc(8.3333% - var(--gridgap) * 0.909);
@@ -355,9 +366,22 @@ body {
   .row .col-12 {
     width: 100%;
   }
+
+  /* BONUS PUSH HELPERS FOR A SEMANTIC GRID */
+  .row .push-one-half {
+    margin-left: calc(50% + var(--gridgap) * 0.5);
+  }
+
+  .row .push-one-third {
+    margin-left: calc(33.3333% + var(--gridgap) * 0.3333);
+  }
+
+  .row .push-one-fourth {
+    margin-left: calc(25% + var(--gridgap) * 0.25);
+  }
 }
 /* BONUS LAYOUT HELPER CLASS FOR SMALL SCREENS */
-/* TWO COLUMN LAYOUT FOR SMALL SCREENS */
+/* TWO COLUMN GRID LAYOUT FOR SMALL SCREENS */
 @media (width < 768px) {
   .row:has(.two-col-mobile) {
     display: flex;
@@ -367,10 +391,4 @@ body {
   .row .two-col-mobile {
     width: calc(50% - var(--gridgap) * 0.5);
   }
-}
-/* FOR GRID DEMO PURPOSES ONLY */
-.grid-demo .row > * {
-  background-color: #ddd;
-  padding: 1em;
-  text-align: center;
 }

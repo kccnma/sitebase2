@@ -29,7 +29,7 @@ $breakpoint-large: 1250px;
 
 // Themes
 
-$theme: "defaault";
+$theme: "default";
 @if ($theme == "lightgrey") {
   // Light Grey
   $text-color: #333;

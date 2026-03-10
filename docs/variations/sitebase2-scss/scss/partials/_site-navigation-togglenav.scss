@@ -1,19 +1,24 @@
 /* TOGGLE NAV */
 .toggle-nav {
 
-  @media (max-width: ($breakpoint-small - 1)) {
+  @media (width  < $breakpoint-small) {
 
+    /* Align the inline-block menu button to the right on small screens */
     text-align: right;
 
-
+    /* POSITION THE LOGO ABSOLUTELY TO THE LEFT OF THE NAV 
+       TO PREVENT IT FROM BEING PUSHED DOWN BY THE MENU BUTTON 
+       ON SMALL SCREENS */
     .site-logo {
       position:absolute; 
     } 
 
+    /* INCREASE PADDING OF NAV LINKS ON SMALL SCREENS */ 
     .site-navigation ul li a {
       padding: 0.75em;
     }
 
+    /* STYLE THE HOVER/TOUCH STATE OF NAV LINKS ON SMALL SCREENS */
     li a:hover {
       color: #fff;
       background: $link-color;
@@ -28,17 +33,18 @@
       border: none;
       padding: 0;
       cursor: pointer;
+      color: var(--color-text-headings);
 
       &::selection {
-        background-color: rgba(255, 255, 255, 0);
+        background-color: transparent;
       }
 
       &.navicon {
-        color: rgba(255, 255, 255, 0); 
+        color: transparent; 
       }
 
       &.navicon::after {
-        color: #333;
+        color: var(--color-text-body);
         content: "\2630";
         font-size: 2em;
         margin-top: -.1em;
@@ -80,7 +86,7 @@
 }
 
 /* Animated Toggle-Nav Menu */
-@media (max-width: ($breakpoint-small - 1)) {
+@media (width < $breakpoint-small) {
   .toggle-nav.animated ul { 
     transition: all 0.4s ease-out;
   }

@@ -392,7 +392,7 @@ body {
 }
 
 /* Main Site Section (Main Content Area) */
-/* Main Sections */
+/* All Sections */
 section {
   padding: 3em 0;
 }
@@ -427,11 +427,6 @@ section {
   text-align: center;
 }
 
-/* HIDE THE MENU BUTTON BY DEFAULT (in case one exists) */
-.site-navigation .menu-button {
-  display: none;
-}
-
 /* DISPLAY LIST ITEMS SIDE-BY-SIDE ON LARGE SCREENS*/
 @media (width >= 768px) {
   .site-navigation ul {
@@ -448,4 +443,9 @@ section {
   color: var(--color-text-headings);
   padding: 0.5em 1em;
   display: block;
+}
+
+/* HIDE THE MENU BUTTON BY DEFAULT (in case one exists) */
+.site-navigation .menu-button {
+  display: none;
 }

@@ -393,7 +393,7 @@ body {
 }
 
 /* Main Site Section (Main Content Area) */
-/* Main Sections */
+/* All Sections */
 section {
   padding: 3em 0;
 }
@@ -644,11 +644,6 @@ article .date + p {
   text-align: center;
 }
 
-/* HIDE THE MENU BUTTON BY DEFAULT (in case one exists) */
-.site-navigation .menu-button {
-  display: none;
-}
-
 /* DISPLAY LIST ITEMS SIDE-BY-SIDE ON LARGE SCREENS*/
 @media (width >= 768px) {
   .site-navigation ul {
@@ -667,29 +662,32 @@ article .date + p {
   display: block;
 }
 
+/* HIDE THE MENU BUTTON BY DEFAULT (in case one exists) */
+.site-navigation .menu-button {
+  display: none;
+}
+
 /* TOGGLE NAV */
 @media (width < 768px) {
   .toggle-nav {
     /* Align the inline-block menu button to the right on small screens */
     text-align: right;
-    /* POSITION THE LOGO ABSOLUTELY TO THE LEFT OF THE NAV 
-       TO PREVENT IT FROM BEING PUSHED DOWN BY THE MENU BUTTON 
-       ON SMALL SCREENS */
-    /* INCREASE PADDING OF NAV LINKS ON SMALL SCREENS */
-    /* STYLE THE HOVER/TOUCH STATE OF NAV LINKS ON SMALL SCREENS */
   }
   .toggle-nav .site-logo {
+    /* Position the logo absolutely to the left of the nav (intentionally breaking normal flow) */
     position: absolute;
   }
   .toggle-nav .site-navigation ul li a {
+    /* Increase the padding of nav links on small screens (thumb friendly) */
     padding: 0.75em;
   }
   .toggle-nav li a:hover {
+    /* Style the hover/touch state of nav links on small screens */
     color: #fff;
     background: #003366;
   }
   .toggle-nav .menu-button {
-    /* Display the Menu Button if inside of a parent with a toggle-nav class */
+    /* SHOW THE MENU BUTTON if inside of toggle-nav */
     display: inline-block;
     margin: 0.6em 0;
     background-color: transparent;

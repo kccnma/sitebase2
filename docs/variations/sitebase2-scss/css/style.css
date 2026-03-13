@@ -706,7 +706,7 @@ body {
 }
 
 /* Main Site Section (Main Content Area) */
-/* Main Sections */
+/* All Sections */
 section {
   padding: 3em 0;
 }
@@ -749,18 +749,15 @@ section {
 section.superlightgrey {
   background: #f9f9f9;
   color: #333;
-  padding: 5em 0 2em 0;
 }
 
 section.lightgrey {
   background: #e0e0e0;
-  padding: 5em 0 2em 0;
 }
 
 section.darkgrey {
   background: #222;
   color: #fff;
-  padding: 5em 0 2em 0;
 }
 section.darkgrey h1, section.darkgrey h2, section.darkgrey h3, section.darkgrey h4, section.darkgrey h5, section.darkgrey h6 {
   color: #fff;
@@ -783,10 +780,6 @@ section.darkgrey a.button.alt:hover {
   background-color: white;
   color: black;
   border-color: transparent;
-}
-
-section.hero.superlightgrey, section.hero.lightgrey, section.hero.darkgrey {
-  padding: 6em 1em 5em 1em;
 }
 
 /* Articles */
@@ -1014,11 +1007,6 @@ article .date + p {
   text-align: center;
 }
 
-/* HIDE THE MENU BUTTON BY DEFAULT (in case one exists) */
-.site-navigation .menu-button {
-  display: none;
-}
-
 /* DISPLAY LIST ITEMS SIDE-BY-SIDE ON LARGE SCREENS*/
 @media (width >= 768px) {
   .site-navigation ul {
@@ -1037,9 +1025,15 @@ article .date + p {
   display: block;
 }
 
+/* HIDE THE MENU BUTTON BY DEFAULT (in case one exists) */
+.site-navigation .menu-button {
+  display: none;
+}
+
 /* ------ SITE NAVIGATION EXTRAS ------ */
 /* ADD SUPPORT FOR NESTED LISTS AS DROP DOWN MENUS */
 .site-navigation li li {
+  /* Prevent nested lsts from wrapping to multiple lines */
   white-space: nowrap;
 }
 
@@ -1047,8 +1041,6 @@ article .date + p {
   .site-navigation li {
     /* Make each list item a parent to any nested uls */
     position: relative;
-    /* Show nested lists on hover and anchor them to the Left by Default*/
-    /* Anchor the Nested list to the right edge of the parent if it's the last child */
   }
   .site-navigation li li {
     /* Stack nested lists */
@@ -1057,7 +1049,7 @@ article .date + p {
   .site-navigation li ul {
     display: block;
     text-align: left;
-    /* Hde nested lists by default via absolute positioning them off screen */
+    /* Hide nested lists by default via absolute positioning them off screen */
     position: absolute;
     z-index: 100;
     left: -9000px;
@@ -1065,15 +1057,17 @@ article .date + p {
     padding-block-end: 1em;
     background-color: transparent;
     background-color: white;
-    /* Style nested list links slighlty differently than parent links */
   }
   .site-navigation li ul a {
+    /* Style nested list links slighlty differently than parent links */
     color: rgba(0, 0, 0, 0.6);
   }
   .site-navigation li:hover ul {
+    /* Show nested lists on hover and anchor them to the Left by Default*/
     left: 0;
   }
   .site-navigation li:last-child:hover ul {
+    /* Anchor the Nested list to the right edge of the parent if it's the last child */
     right: 0;
     left: auto;
   }
@@ -1083,24 +1077,22 @@ article .date + p {
   .toggle-nav {
     /* Align the inline-block menu button to the right on small screens */
     text-align: right;
-    /* POSITION THE LOGO ABSOLUTELY TO THE LEFT OF THE NAV 
-       TO PREVENT IT FROM BEING PUSHED DOWN BY THE MENU BUTTON 
-       ON SMALL SCREENS */
-    /* INCREASE PADDING OF NAV LINKS ON SMALL SCREENS */
-    /* STYLE THE HOVER/TOUCH STATE OF NAV LINKS ON SMALL SCREENS */
   }
   .toggle-nav .site-logo {
+    /* Position the logo absolutely to the left of the nav (intentionally breaking normal flow) */
     position: absolute;
   }
   .toggle-nav .site-navigation ul li a {
+    /* Increase the padding of nav links on small screens (thumb friendly) */
     padding: 0.75em;
   }
   .toggle-nav li a:hover {
+    /* Style the hover/touch state of nav links on small screens */
     color: #fff;
     background: #003366;
   }
   .toggle-nav .menu-button {
-    /* Display the Menu Button if inside of a parent with a toggle-nav class */
+    /* SHOW THE MENU BUTTON if inside of toggle-nav */
     display: inline-block;
     margin: 0.6em 0;
     background-color: transparent;

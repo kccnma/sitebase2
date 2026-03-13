@@ -15,18 +15,15 @@
 section.superlightgrey {
   background: #f9f9f9;
   color: #333;
-  padding: 5em 0 2em 0;
 }
 
 section.lightgrey {
   background: #e0e0e0;
-  padding: 5em 0 2em 0;
 }
 
 section.darkgrey {
   background: #222;
   color: #fff;
-  padding: 5em 0 2em 0;
   h1,h2,h3,h4,h5,h6 {
     color: #fff;
   }
@@ -50,10 +47,3 @@ section.darkgrey {
   }
 }
 
-section.hero {
-  &.superlightgrey,
-  &.lightgrey,
-  &.darkgrey {
-    padding: 6em 1em 5em 1em;
-  }
-}

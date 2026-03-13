@@ -6,27 +6,26 @@
     /* Align the inline-block menu button to the right on small screens */
     text-align: right;
 
-    /* POSITION THE LOGO ABSOLUTELY TO THE LEFT OF THE NAV 
-       TO PREVENT IT FROM BEING PUSHED DOWN BY THE MENU BUTTON 
-       ON SMALL SCREENS */
     .site-logo {
+      /* Position the logo absolutely to the left of the nav (intentionally breaking normal flow) */
       position:absolute; 
     } 
-
-    /* INCREASE PADDING OF NAV LINKS ON SMALL SCREENS */ 
+ 
     .site-navigation ul li a {
+      /* Increase the padding of nav links on small screens (thumb friendly) */
       padding: 0.75em;
     }
 
-    /* STYLE THE HOVER/TOUCH STATE OF NAV LINKS ON SMALL SCREENS */
+   
     li a:hover {
+       /* Style the hover/touch state of nav links on small screens */
       color: #fff;
       background: $link-color;
     }
 
     
     .menu-button {
-      /* Display the Menu Button if inside of a parent with a toggle-nav class */
+      /* SHOW THE MENU BUTTON if inside of toggle-nav */
       display: inline-block;
       margin: .6em 0;
       background-color: transparent;

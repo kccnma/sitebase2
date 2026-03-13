@@ -1,7 +1,4 @@
 /* ----- SITE NAVIGATION ------ */
-// .site-navigation {
-//   font-size: .8em;
-// }
 
 /* RESET THE STYLING FOR SITE NAV LISTS */
 .site-navigation ul {
@@ -9,11 +6,6 @@
   padding: 0;
   list-style: none;
   text-align: center;
-}
-
-/* HIDE THE MENU BUTTON BY DEFAULT (in case one exists) */
-.site-navigation .menu-button {
-  display: none;
 }
 
 /* DISPLAY LIST ITEMS SIDE-BY-SIDE ON LARGE SCREENS*/
@@ -35,4 +27,9 @@
   color: var(--color-text-headings);
   padding: .5em 1em;
   display: block;
+}
+
+/* HIDE THE MENU BUTTON BY DEFAULT (in case one exists) */
+.site-navigation .menu-button {
+  display: none;
 }

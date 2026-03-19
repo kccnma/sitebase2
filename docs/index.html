@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>SiteBase2 | Documentation</title>
-  <meta name="description" content="Documentation for SiteBase: a minimalistic HTML + CSS + JS base front-end framework for simple web site projects.">
+  <meta name="description"
+    content="Documentation for SiteBase: a minimalistic HTML + CSS + JS base front-end framework for simple web site projects.">
 
   <!-- VIEWPORT FOR MOBILE -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,7 +17,7 @@
 <body>
   <header class="site-header toggle-nav animated">
     <div class="site-logo">
-      <h1><a href="../index.html">SiteBase2</a> / Docs</h1>
+      <h1><a href="../index.html">SiteBase2</a></h1>
     </div>
     <nav class="site-navigation">
       <button class="menu-button navicon"><span class="hidden">Menu</span></button>
@@ -140,16 +141,25 @@
             <h2 class="section-header">Get Started</h2>
             <p>SiteBase2 was designed to be used two different ways:</p>
             <ol>
-              <li>As a blank starter project - to be downloaded as a starter set of boilerplate code that developers can then "save as" and modified as quick-and-easy way to custom build a bespoke static website.</li>
-              <li>As a learning project - to be manually recoded from scratch by following a set of step-by-step lessons designed specifically for beginner level web designers and frontend web developers looking to learn how to manually code bespoke static sites from scratch.</li>
+              <li>As a blank starter project - to be downloaded as a starter set of boilerplate code that developers can
+                then "save as" and modified as quick-and-easy way to custom build a bespoke static website.</li>
+              <li>As a learning project - to be manually recoded from scratch by following a set of step-by-step lessons
+                designed specifically for beginner level web designers and frontend web developers looking to learn how
+                to manually code bespoke static sites from scratch.</li>
             </ol>
 
             <h3 id="download">Download SiteBase2 .zip File</h3>
-            <p>The easiest way to jump right in and get started is to download SiteBase2 as a blank starter set of files and folders that are already set up to be customized to begin manually coding any bespoke static website project. No build tool required. Just download the project folder, rename it, and customize it. It's that simple.</p>
+            <p>The easiest way to jump right in and get started is to download SiteBase2 as a blank starter set of files
+              and folders that are already set up to be customized to begin manually coding any bespoke static website
+              project. No build tool required. Just download the project folder, rename it, and customize it. It's that
+              simple.</p>
             <p><a class="button" href="variations/sitebase2-static.zip">Download SiteBase2 [.zip]</a></p>
 
             <h3 id="lessons">Follow the Step-by-Step Lessons</h3>
-            <p>The harder (but more meaningful) way to begin using SiteBase2, is to manually recode it from scratch by following along with step-by-step lessons with detailed instructions to create your own site base. SiteBase2 was designed for UX/UI designers and beginner-level frontend web development students. It is 100% open source and free to use for any and all projects inclusing personal and commercial websites.</p>
+            <p>The harder (but more meaningful) way to begin using SiteBase2, is to manually recode it from scratch by
+              following along with step-by-step lessons with detailed instructions to create your own site base.
+              SiteBase2 was designed for UX/UI designers and beginner-level frontend web development students. It is
+              100% open source and free to use for any and all projects inclusing personal and commercial websites.</p>
             <p><a class="button alt" href="lessons.html">Go to the SiteBase2 Lessons</a></p>
 
           </section>
@@ -225,7 +235,8 @@ document.addEventListener('DOMContentLoaded', function() {
             <h2 class="section-header">Global Styles</h2>
 
             <h3 id="globalreset">Global CSS Resets</h3>
-            <p>Basic CSS reset to remove default browser styling (e.g. default body margins) and enable helpful features such as smooth-scrolling.</p>
+            <p>Basic CSS reset to remove default browser styling (e.g. default body margins) and enable helpful features
+              such as smooth-scrolling.</p>
             <pre><code>/* CHANGE BOX-SIZING FOR ALL TO BORDER-BOX */
 * { box-sizing: border-box; }
 
@@ -239,38 +250,38 @@ html { scroll-behavior: smooth; } </code></pre>
             <p>SiteBase comes with a starter set of global colors defined in CSS custom properties (variables).</p>
 
             <style>
-                .color-chips,
-                .color-chips li {
-                    margin: 0;
-                    padding: 0;
-                    list-style: none;
-                }
+              .color-chips,
+              .color-chips li {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+              }
 
-                .color-chips {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 1em;
-                    text-align: center;
-                }
+              .color-chips {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1em;
+                text-align: center;
+              }
 
-                .color-chips span {
-                    padding: 2em;
-                    border: 1px solid #ccc;
-                    border-radius: 5px;
-                    display: block;
-                }
+              .color-chips span {
+                padding: 2em;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                display: block;
+              }
             </style>
             <ul class="color-chips">
-                <li><span style="background-color: #fff; color: black;">#fff</span> Body BG</li>
-                <li><span style="background-color: #333; color: white;">#333</span> Text</li>
-                <li><span style="background-color: #000; color: white;">#000</span> Headings</li>
-                <li><span style="background-color: #036; color: white;">#036</span> Links</li>
-                <li><span style="background-color: #003; color: white;">#003</span> Link Hovers</li>
-                <li><span style="background-color: #ddd; color: black;">#ddd</span> Hero BG</li>
-                <!-- <li><span style="background-color: #000; color: white;">#000</span> Black</li>
+              <li><span style="background-color: #fff; color: black;">#fff</span> Body BG</li>
+              <li><span style="background-color: #333; color: white;">#333</span> Text</li>
+              <li><span style="background-color: #000; color: white;">#000</span> Headings</li>
+              <li><span style="background-color: #036; color: white;">#036</span> Links</li>
+              <li><span style="background-color: #003; color: white;">#003</span> Link Hovers</li>
+              <li><span style="background-color: #ddd; color: black;">#ddd</span> Hero BG</li>
+              <!-- <li><span style="background-color: #000; color: white;">#000</span> Black</li>
                 <li><span style="background-color: #fff; color: black;">#fff</span> White</li> -->
             </ul>
-            
+
             <h3 id="globalvariables">Global CSS Custom Properties (Variables)</h3>
             <p>CSS custom properties (variables) for global (site-level) colors and fonts.</p>
 
@@ -298,7 +309,8 @@ html { scroll-behavior: smooth; } </code></pre>
             <h2 class="section-header">Typography</h2>
 
             <h3 id="headings">Default Heading Styles</h3>
-            <p>SiteBase comes with default styling settings that help to support best practices for good typography specifically for headings.</p>
+            <p>SiteBase comes with default styling settings that help to support best practices for good typography
+              specifically for headings.</p>
 
             <pre><code>/* # GLOBAL HEADING SETTINGS */
 h1, h2, h3, h4, h5, h6 {
@@ -351,7 +363,9 @@ h1, h2, h3, h4, h5, h6 {
             </p>
 
             <h3 id="paragraphs">Default Paragraph Syles</h3>
-            <p>SiteBase comes with default text styling that embraces best practices for good typography specifically for body text and paragraphs, such as limiting the number of characters per line for readability (horizontal measure) and modern browser support for <code>text-wrap: pretty</code> to avoid widows.</p>
+            <p>SiteBase comes with default text styling that embraces best practices for good typography specifically
+              for body text and paragraphs, such as limiting the number of characters per line for readability
+              (horizontal measure) and modern browser support for <code>text-wrap: pretty</code> to avoid widows.</p>
 
             <pre><code>p {
 
@@ -487,7 +501,7 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
             <pre><code>&#60;img src="path/to/image.jpg" alt="placeholder" width="1200" height="400"&#62;
 </code></pre>
 
-          <p id="videos">This is a responsive inline video:</p>
+            <p id="videos">This is a responsive inline video:</p>
             <video controls>
               <source src="videos/placeholder-video.mp4" type="video/mp4">
               Your browser does not support the video tag.
@@ -522,7 +536,9 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
             <h2 id="mediaqueries" class="section-header">Media Queries</h2>
             <p>Mobile-first media queries with four target screen sizes:</p>
 
-            <img src="img/sitebase-responsive.jpg" alt="Visual of SiteBase in four devices: mobile phone, tablet, notebook, and desktop monitor" width="1800" height="900">
+            <img src="img/sitebase-responsive.jpg"
+              alt="Visual of SiteBase in four devices: mobile phone, tablet, notebook, and desktop monitor" width="1800"
+              height="900">
 
             <ul>
               <li>Small (Mobile): 0-767px+ (default)</li>
@@ -555,7 +571,11 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
 </code></pre>
 
             <h2 id="grid" class="section-header">A Simple Semantic Grid System</h2>
-            <p>By default, SiteBase comes with a simple semantic grid system based on stacked rows (<code>&#60;div class="row"&#62;</code>) with nested columns and a default set of commonly used, easy-to-remember semantic class names such as <code>class="one-half"</code> or <code>class="one-third"</code>.</p>
+            <p>By default, SiteBase comes with a simple semantic grid system based on stacked rows
+              (<code>&#60;div class="row"&#62;</code>) with nested columns and a default set of commonly used,
+              easy-to-remember semantic class names such as <code>class="one-half"</code> or
+              <code>class="one-third"</code>.
+            </p>
 
             <img src="img/sitelayout-grid-semantic.png" alt="Visual of Semantic Grid Layout" width="2400" height="1800">
 
@@ -646,10 +666,12 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
 
             <p>
               The base site structure consists of three main parts in the body section of the web
-              page: the header, main, and footer. Many websites are structured this way, with each stacked one on top another vertically and rendering via normal flow (top to bottom) in the browser.
+              page: the header, main, and footer. Many websites are structured this way, with each stacked one on top
+              another vertically and rendering via normal flow (top to bottom) in the browser.
             </p>
 
-            <img src="img/sitestructure-header-main-footer.png" alt="Visual of Site Structure: Header, Main Content Area, Footer" width="1600" height="1200">
+            <img src="img/sitestructure-header-main-footer.png"
+              alt="Visual of Site Structure: Header, Main Content Area, Footer" width="1600" height="1200">
 
             <pre><code>&#60;body&#62;
 
@@ -666,15 +688,21 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
 </code></pre>
 
             <h4 id="pagesections">One Main Content Area with Multiple Stacked Sections</h4>
-            <p>By default, each page has one <code>&#60;main&#62;</code> element for all main content to reside with no default styling (e.g. no margins or padding) to allow multiple <code>&#60;section&#62;</code> elements to be nested inside and stacked on top of one another</p>
+            <p>By default, each page has one <code>&#60;main&#62;</code> element for all main content to reside with no
+              default styling (e.g. no margins or padding) to allow multiple <code>&#60;section&#62;</code> elements to
+              be nested inside and stacked on top of one another</p>
 
-            <img src="img/sitestructure-main-sections.png" alt="Visual of One Main Content Area with Multiple Stacked Sections" width="1600" height="1200">
+            <img src="img/sitestructure-main-sections.png"
+              alt="Visual of One Main Content Area with Multiple Stacked Sections" width="1600" height="1200">
 
-            <p>Each <code>&#60;section&#62;</code> is full-width by default, extending to the full-width of the browser. To constrain content width, sections can either be nested within a parent <code>&#60;div class="container"&#62;&#60;/div&#62;</code> element, or each section can have nested <code>&#60;div class="container"&#62;&#60;/div&#62;
+            <p>Each <code>&#60;section&#62;</code> is full-width by default, extending to the full-width of the browser.
+              To constrain content width, sections can either be nested within a parent
+              <code>&#60;div class="container"&#62;&#60;/div&#62;</code> element, or each section can have nested <code>&#60;div class="container"&#62;&#60;/div&#62;
 </code> elements inside of each (recommended). This base also includes default styling for a "hero" section.
             </p>
 
-            <img src="img/sitestructure-sections-with-nested-containers.png" alt="Visual of Sections with Nested Containers" width="1600" height="1200">
+            <img src="img/sitestructure-sections-with-nested-containers.png"
+              alt="Visual of Sections with Nested Containers" width="1600" height="1200">
 
             <pre><code>&#60;main class="site-main"&#62;
 
@@ -700,10 +728,13 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
             <h3 id="navigation">Site Navigation</h3>
 
             <p>
-              This base consists of a primary navigation area on the top of each page with the site header. By default it renders the logo on the left and navigation on the right, but can be easily customized.
+              This base consists of a primary navigation area on the top of each page with the site header. By default
+              it renders the logo on the left and navigation on the right, but can be easily customized.
             </p>
 
-            <img src="img/site-navigation.png" alt="Visual of a Site Header with a Logo on the left and Site Navigation on the right" width="2400" height="1800">
+            <img src="img/site-navigation.png"
+              alt="Visual of a Site Header with a Logo on the left and Site Navigation on the right" width="2400"
+              height="1800">
 
             <pre><code>&#60;nav class="site-navigation"&#62;
     &#60;ul&#62;
@@ -754,23 +785,38 @@ Duis ut fringilla ipsum, sed bibendum augue.&#60;/p&#62;
 
       </div>
     </div>
-    <!-- END CONTAINER -->
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <nav class="site-navigation">
-        <ul class="nav">
-          <li><a href="../index.html">SiteBase2 Home</a></li>
-          <li><a href="lessons.html">Lessons</a></li>
-          <li class="selected">
-            <a href="index.html">Documentation</a>
-          </li>
-          <li><a href="examples.html">Examples</a></li>
-        </ul>
-      </nav>
+
+      <div class="row">
+
+        <div class="two-thirds">
+          <h3>SiteBase 2</h3>
+          <p>SiteBase 2 is a minimalistic HTML + CSS + JS base-level front-end starter for small, bespoke static
+            websites. It was created for students learning the fundamentals of front-end web development. It can be used
+            as a blank starter for custom websites, or as a hands-on learning experience by going through a series of
+            lessons and exercises manually recoding it from scratch.</p>
+        </div>
+
+        <div class="one-third">
+          <h3>Pages</h3>
+          <nav class="site-navigation">
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="lessons.html">Lessons</a></li>
+              <li class="selected">
+                <a href="index.html">Documentation</a>
+              </li>
+              <li><a href="examples.html">Examples</a></li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+
     </div>
-    <!-- END CONTAINER -->
   </footer>
 
   <!-- MAIN JS -->

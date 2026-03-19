@@ -338,7 +338,8 @@ body {
 .site-header a:hover {
   color: var(--color-links-hover);
 }
-.site-header a.button {
+.site-header a.button,
+.site-header .site-navigation a.button {
   color: white;
 }
 
@@ -369,26 +370,8 @@ body {
 
 /* Site Footer */
 .site-footer {
-  background: transparent;
-  padding-block: 2em;
-}
-.site-footer a {
-  color: rgba(0, 0, 0, 0.8);
-  text-decoration: none;
-}
-.site-footer a:hover {
-  color: #000033;
-}
-.site-footer .container {
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
-}
-@media (min-width: 768px) {
-  .site-footer .container {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 0.5em;
-  }
+  background: rgba(0, 0, 0, 0.05);
+  padding-block: 4em;
 }
 
 /* Main Site Section (Main Content Area) */
@@ -419,17 +402,21 @@ section {
 }
 
 /* ----- SITE NAVIGATION ------ */
-/* RESET THE STYLING FOR SITE NAV LISTS */
-.site-navigation ul {
+/* SITE-HEADER SITE-NAVIGATION */
+.site-header {
+  /* RESET THE LIST DEFAULT STYLING */
+  /* DISPLAY LIST ITEMS SIDE-BY-SIDE ON LARGE SCREENS*/
+  /* STYLE NAV LINKS DIFFERENTLY THAN DEFAULT INLINE LINKS*/
+  /* HIDE THE MENU BUTTON BY DEFAULT (in case one exists) */
+}
+.site-header .site-navigation ul {
   margin: 0;
   padding: 0;
   list-style: none;
   text-align: center;
 }
-
-/* DISPLAY LIST ITEMS SIDE-BY-SIDE ON LARGE SCREENS*/
 @media (width >= 768px) {
-  .site-navigation ul {
+  .site-header .site-navigation ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -437,15 +424,22 @@ section {
     gap: 0.5em;
   }
 }
-/* STYLE NAV LINKS DIFFERENTLY THAN DEFAULT INLINE LINKS*/
-.site-navigation a {
+.site-header .site-navigation a {
   text-decoration: none;
   color: var(--color-text-headings);
   padding: 0.5em 1em;
   display: block;
 }
-
-/* HIDE THE MENU BUTTON BY DEFAULT (in case one exists) */
-.site-navigation .menu-button {
+.site-header .site-navigation .menu-button {
   display: none;
+}
+
+/* SITE-FOOTER  SITE-NAVIGATION */
+.site-footer {
+  /* RESET THE LIST DEFAULT STYLING */
+}
+.site-footer .site-navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }

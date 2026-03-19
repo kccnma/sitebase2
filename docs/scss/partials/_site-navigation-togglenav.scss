@@ -1,29 +1,29 @@
 /* TOGGLE NAV */
-.toggle-nav {
+.site-header.toggle-nav {
 
-  @media (width  < $breakpoint-small) {
+  @media (width < $breakpoint-small) {
 
     /* Align the inline-block menu button to the right on small screens */
     text-align: right;
 
     .site-logo {
       /* Position the logo absolutely to the left of the nav (intentionally breaking normal flow) */
-      position:absolute; 
-    } 
- 
+      position: absolute;
+    }
+
     .site-navigation ul li a {
       /* Increase the padding of nav links on small screens (thumb friendly) */
       padding: 0.75em;
     }
 
-   
+
     li a:hover {
-       /* Style the hover/touch state of nav links on small screens */
+      /* Style the hover/touch state of nav links on small screens */
       color: #fff;
       background: $link-color;
     }
 
-    
+
     .menu-button {
       /* SHOW THE MENU BUTTON if inside of toggle-nav */
       display: inline-block;
@@ -39,7 +39,7 @@
       }
 
       &.navicon {
-        color: transparent; 
+        color: transparent;
       }
 
       &.navicon::after {
@@ -65,16 +65,18 @@
       }
     }
 
-    
+
     ul {
       max-height: 0;
       overflow: hidden;
       padding: 0;
     }
+
     &[data-navstate="open"] {
       ul {
         max-height: none;
         padding: 1em 0;
+
         ul {
           padding: 0;
         }
@@ -86,7 +88,7 @@
 
 /* Animated Toggle-Nav Menu */
 @media (width < $breakpoint-small) {
-  .toggle-nav.animated ul { 
+  .toggle-nav.animated ul {
     transition: all 0.4s ease-out;
   }
 

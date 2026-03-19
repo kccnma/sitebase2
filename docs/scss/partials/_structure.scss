@@ -12,11 +12,11 @@
   // border-bottom: $border-width solid $border-color;
   padding: 0.5em 1em;
 
-  @media (width >= $breakpoint-small) {
+  @media (width >=$breakpoint-small) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-block-start: 0.75em; 
+    padding-block-start: 0.75em;
   }
 
   a {
@@ -28,7 +28,8 @@
     color: var(--color-links-hover);
   }
 
-  a.button {
+  a.button,
+  .site-navigation a.button {
     color: white;
   }
 
@@ -48,7 +49,7 @@
     display: block;
   }
 
-  h1 { 
+  h1 {
     font-size: 1.5em;
     font-weight: normal;
     font-style: normal;
@@ -68,28 +69,17 @@
 .site-footer {
   background: $background-color-footer;
   // border-top: $border-width solid $border-color;
-  padding-block: 2em;
+  padding-block: 4em;
 
-  a {
-    color: $text-color;
-    text-decoration: none;
-  }
+  // a {
+  //   color: $text-color;
+  //   text-decoration: none;
+  // }
 
-  a:hover {
-    color: $link-color-dark;
-  }
+  // a:hover {
+  //   color: $link-color-dark;
+  // }
 
-  .container {
-    padding-top: 0.25em;
-    padding-bottom: 0.25em;
-
-    @media (min-width: $breakpoint-small) {
-      display: flex;
-      justify-content: center;
-      padding-bottom: 0.5em;
-    }
-    
-  }
 }
 
 /* Main Site Section (Main Content Area) */
@@ -114,13 +104,13 @@ section {
   background: $background-color-hero;
   // border-top: none;
   //border-bottom: 1px solid $border-color;
-  padding: 4em 1em; 
+  padding: 4em 1em;
   // margin-bottom: 1.5em;
 
   h1,
   h2 {
     font-size: 4em;
-    line-height: 1.1em; 
+    line-height: 1.1em;
     letter-spacing: -.02em;
   }
 

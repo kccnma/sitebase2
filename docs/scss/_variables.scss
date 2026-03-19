@@ -15,7 +15,7 @@ $link-color-light: rgb(221, 255, 255);
 $accent-color: #888;
 $background-color-body: rgb(255, 255, 255);
 $background-color-header: transparent;
-$background-color-footer: transparent;
+$background-color-footer: rgb(0 0 0 / .05);
 $background-color-hero: rgb(221, 221, 221);
 
 // Borders
@@ -30,7 +30,8 @@ $breakpoint-large: 1250px;
 // Themes
 
 $theme: "default";
-@if ($theme == "lightgrey") {
+
+@if ($theme =="lightgrey") {
   // Light Grey
   $text-color: #333;
   $text-color-light: #999;
@@ -45,7 +46,9 @@ $theme: "default";
   $background-color-hero: #f0f0f0;
   $border-color: #ccc;
   $border-width: 0px;
-} @else if ($theme == "darkgrey") {
+}
+
+@else if ($theme =="darkgrey") {
   // Dark Grey
   $text-color: #ccc;
   $text-color-light: #999;
@@ -60,7 +63,9 @@ $theme: "default";
   $background-color-hero: #333;
   $border-color: #222;
   $border-width: 0px;
-} @else if ($theme == "wireframe") {
+}
+
+@else if ($theme =="wireframe") {
   // Wireframe
   $body-font-family: "Courier New", Courier, "Lucida Sans Typewriter",
     "Lucida Typewriter", monospace;
@@ -79,7 +84,9 @@ $theme: "default";
   $background-color-hero: #f0f0f0;
   $border-color: #ccc;
   $border-width: 0px;
-} @else if ($theme == "white") {
+}
+
+@else if ($theme =="white") {
   // White (default)
   $text-color: #333;
   $text-color-light: #999;

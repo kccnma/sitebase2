@@ -1,35 +1,54 @@
 /* ----- SITE NAVIGATION ------ */
 
-/* RESET THE STYLING FOR SITE NAV LISTS */
-.site-navigation ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-align: center;
-}
+/* SITE-HEADER SITE-NAVIGATION */
 
-/* DISPLAY LIST ITEMS SIDE-BY-SIDE ON LARGE SCREENS*/
-@media ( width >= 768px ) {
+.site-header {
 
+  /* RESET THE LIST DEFAULT STYLING */
   .site-navigation ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: .5em;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+
+  /* DISPLAY LIST ITEMS SIDE-BY-SIDE ON LARGE SCREENS*/
+  @media (width >=768px) {
+
+    .site-navigation ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: .5em;
+    }
+
+  }
+
+  /* STYLE NAV LINKS DIFFERENTLY THAN DEFAULT INLINE LINKS*/
+  .site-navigation a {
+    text-decoration: none;
+    color: var(--color-text-headings);
+    padding: .5em 1em;
+    display: block;
+  }
+
+  /* HIDE THE MENU BUTTON BY DEFAULT (in case one exists) */
+  .site-navigation .menu-button {
+    display: none;
   }
 
 }
 
-/* STYLE NAV LINKS DIFFERENTLY THAN DEFAULT INLINE LINKS*/
-.site-navigation a {
-  text-decoration: none;
-  color: var(--color-text-headings);
-  padding: .5em 1em;
-  display: block;
-}
+/* SITE-FOOTER  SITE-NAVIGATION */
 
-/* HIDE THE MENU BUTTON BY DEFAULT (in case one exists) */
-.site-navigation .menu-button {
-  display: none;
+.site-footer {
+
+  /* RESET THE LIST DEFAULT STYLING */
+  .site-navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
 }

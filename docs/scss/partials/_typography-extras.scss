@@ -6,10 +6,10 @@
 
 /* TO CENTER ANY ELEMENT HORIZONTALLY */
 .horiz-center {
-  margin-inline: auto; 
+  margin-inline: auto;
 }
 
-/* TO HIDE ELEMENTS VISUALLY, BUT NOT FROM SCREEN READERS */ 
+/* TO HIDE ELEMENTS VISUALLY, BUT NOT FROM SCREEN READERS */
 .hide,
 .hidden,
 .screen-reader-only {
@@ -32,6 +32,7 @@
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: .2em;
+  padding-block-start: 3em;
 
   &::after {
     content: '';
@@ -57,7 +58,7 @@ hr {
   border: 0;
   height: 1px;
   background: #ddd;
-  margin: 3em 0; 
+  margin: 3em 0;
 }
 
 /* #CODE and #PRE STYLING */
@@ -91,6 +92,7 @@ pre code {
 /* Use the optional class="blocked" dev helper class to see elements as grey blocks while developing your website. */
 
 .blocked {
+
   body,
   h1,
   h2,

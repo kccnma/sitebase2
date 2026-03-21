@@ -1156,7 +1156,7 @@ form label {
 
 form input,
 form textarea {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: var(--font-body);
   font-size: 1em;
   line-height: 1.15em;
   display: block;
@@ -1180,8 +1180,6 @@ form input[type=reset] {
   border: 1px solid var(--color-links);
   color: #fff;
   padding: 0.75em 1em;
-  -webkit-border-radius: 0.32em;
-  -moz-border-radius: 0.32em;
   border-radius: 0.32em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;

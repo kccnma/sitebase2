@@ -160,7 +160,7 @@ function copyjsroot() {
 
 // COPY IMAGES FROM ROOT SRC
 function copyimagesroot() {
-  return src('src/**/*.+(png|jpg|jpeg|gif|svg|webp|avif)', {  encoding: false, base: 'src' })
+  return src('src/**/*.+(png|jpg|jpeg|gif|svg|webp|avif)', { encoding: false, base: 'src' })
     .pipe(dest('docs/'))
     .pipe(dest('docs/variations/sitebase2-static/'))
     .pipe(dest('docs/variations/sitebase2-scss/'))
@@ -241,10 +241,18 @@ function sasslesson6() {
 
 // SASS LESSON7
 function sasslesson7() {
-  return src('docs/lessons/base-site-subpages.scss')
+  return src('docs/lessons/base-singlepagesite.scss')
     .pipe(sass(sassOptions))
     .pipe(rename('css/style.css'))
-    .pipe(dest('docs/lessons/base-site-subpages/'));
+    .pipe(dest('docs/lessons/base-singlepagesite/'));
+}
+
+// SASS LESSON8
+function sasslesson8() {
+  return src('docs/lessons/base-multipagesite.scss')
+    .pipe(sass(sassOptions))
+    .pipe(rename('css/style.css'))
+    .pipe(dest('docs/lessons/base-multipagesite/'));
 }
 
 
@@ -292,8 +300,15 @@ function ziplesson6() {
 
 // ZIP LESSON7
 function ziplesson7() {
-  return src('docs/lessons/base-site-subpages/**/*')
-    .pipe(zip('base-site-subpages.zip'))
+  return src('docs/lessons/base-singlepagesite/**/*')
+    .pipe(zip('base-singlepagesite.zip'))
+    .pipe(dest('docs/lessons/'));
+}
+
+// ZIP LESSON8
+function ziplesson8() {
+  return src('docs/lessons/base-multipagesite/**/*')
+    .pipe(zip('base-multipagesite.zip'))
     .pipe(dest('docs/lessons/'));
 }
 
@@ -333,7 +348,7 @@ function zipexample3() {
 }
 
 // WATCH DOCS
-const doc_series = [html, css, js, imageMin, copyhtmlroot, copysassroot, copyjsroot, copyimagesroot, sassroot, sasslesson1, sasslesson2, sasslesson3, sasslesson4, sasslesson5, sasslesson6, sasslesson7, ziplesson1, ziplesson2, ziplesson3, ziplesson4, ziplesson5, ziplesson6, ziplesson7, zipvariation1, zipvariation2, zipexample1, zipexample2, zipexample3];
+const doc_series = [html, css, js, imageMin, copyhtmlroot, copysassroot, copyjsroot, copyimagesroot, sassroot, sasslesson1, sasslesson2, sasslesson3, sasslesson4, sasslesson5, sasslesson6, sasslesson7, sasslesson8, ziplesson1, ziplesson2, ziplesson3, ziplesson4, ziplesson5, ziplesson6, ziplesson7, ziplesson8, zipvariation1, zipvariation2, zipexample1, zipexample2, zipexample3];
 
 function watch_docs() {
   browserSync.init({
@@ -377,6 +392,7 @@ export {
   sasslesson5,
   sasslesson6,
   sasslesson7,
+  sasslesson8,
   ziplesson1,
   ziplesson2,
   ziplesson3,
@@ -384,6 +400,7 @@ export {
   ziplesson5,
   ziplesson6,
   ziplesson7,
+  ziplesson8,
   zipvariation1,
   zipvariation2,
   zipexample1,
